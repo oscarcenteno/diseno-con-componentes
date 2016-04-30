@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Models.Emision>
+
+@{
+    ViewBag.Title = "Emisiones realizadas";
+}
+
+<h2>Emisiones realizadas</h2>
+
+<p>
+    @Html.ActionLink("Emitir certificados", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            # Emisión
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Identificacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoDeIdentificacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrimerApellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SegundoApellido)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Identificacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDeIdentificacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrimerApellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SegundoApellido)
+        </td>
+        <td>
+            @Html.ActionLink("Certificados emitidos", "Details", new { id=item.ID })
+        </td>
+    </tr>
+}
+</table>

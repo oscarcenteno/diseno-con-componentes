@@ -1,0 +1,45 @@
+﻿@model List<Models.Certificado>
+
+@{
+    ViewBag.Title = "Certificados emitidos";
+}
+
+<h2>Certificados emitidos</h2>
+
+<div>
+    <table class="table">
+        <tr>
+            <th>
+                # Emision
+            </th>
+            <th>Sujeto
+            </th>
+            <th>FechaDeEmision
+            </th>
+            <th>FechaDeVencimiento
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmisionID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sujeto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaDeEmision)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaDeVencimiento)
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+<p>
+    @Html.ActionLink("Regresar a la lista de emisiones", "Index")
+</p>
