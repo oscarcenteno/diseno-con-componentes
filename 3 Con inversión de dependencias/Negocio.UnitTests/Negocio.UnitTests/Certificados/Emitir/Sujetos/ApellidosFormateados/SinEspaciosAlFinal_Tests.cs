@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConObjetosConPolimorfismo;
+using Sujetos;
 
-namespace ConObjetosConPolimorfismo_Tests
+namespace Sujetos_Tests
 {
     [TestClass()]
     public class SinEspaciosAlFinal_Tests : EscenarioBase_Tests

@@ -12,7 +12,7 @@ namespace Emitir.CertificadoDeFirma_Tests
         [TestMethod()]
         public void Sujeto_CasoUnico()
         {
-            elResultadoEsperado = Sujetos.UnSujetoDeFirmaParaUnNacional();
+            elResultadoEsperado = EscenariosDeSujetos.UnSujetoDeFirmaParaUnNacional();
 
             InicialiceUnNacional();
             elResultadoObtenido = new CertificadoDeFirma(laSolicitud).Sujeto;

@@ -12,7 +12,7 @@ namespace Emitir.CertificadoDeAutenticacion_Tests
         [TestMethod()]
         public void Sujeto_CasoUnico()
         {
-            elResultadoEsperado = Sujetos.UnSujetoDeAutenticacionParaUnNacional();
+            elResultadoEsperado = EscenariosDeSujetos.UnSujetoDeAutenticacionParaUnNacional();
 
             InicialiceUnNacional();
             elResultadoObtenido = new CertificadoDeAutenticacion(laSolicitud).Sujeto;

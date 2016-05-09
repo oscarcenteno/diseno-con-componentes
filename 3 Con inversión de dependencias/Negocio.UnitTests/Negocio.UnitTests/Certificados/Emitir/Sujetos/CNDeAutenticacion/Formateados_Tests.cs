@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConObjetosConPolimorfismo;
+using Sujetos;
 
-namespace ConObjetosConPolimorfismo_Tests.CNDeAutenticacion_Tests
+namespace Sujetos_Tests.CNDeAutenticacion_Tests
 {
     [TestClass()]
     public class Formateado_Tests : EscenarioBase_Tests

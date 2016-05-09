@@ -68,7 +68,7 @@
     <Compile Include="Certificados\Emitir\Certificados\CertificadoDeFirma\Sujeto_Tests.cs" />
     <Compile Include="Certificados\Emitir\Certificados\CertificadoDeFirma\Url_Tests.cs" />
     <Compile Include="Certificados\Emitir\Certificados\EscenarioBase_Tests.cs" />
-    <Compile Include="Certificados\Emitir\Sujetos.cs" />
+    <Compile Include="Certificados\Emitir\EscenariosDeSujetos.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\ApellidosFormateados\SinEspaciosAlFinal_Tests.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\Apellidos\Formateados_Tests.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\CNDeAutenticacion\Formateados_Tests.cs" />
@@ -79,6 +79,8 @@
     <Compile Include="Certificados\Emitir\Sujetos\SolicitanteExtranjero\SerialNumber_Tests.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\SolicitanteNacional\OU_Tests.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\SolicitanteNacional\SerialNumber_Tests.cs" />
+    <Compile Include="Certificados\Emitir\Sujetos\Solicitante\NombreEnMayusculas_Tests.cs" />
+    <Compile Include="Certificados\Emitir\Sujetos\Solicitante\Apellidos_Tests.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\SujetoDeAutenticacion\Formateado_Tests.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\SujetoDeFirma\Formateado_Tests.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\SurName\Formateados_Tests.cs" />

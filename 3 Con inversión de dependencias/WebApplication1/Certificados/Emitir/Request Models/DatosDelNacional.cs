@@ -1,5 +1,5 @@
 ﻿using BS.Certificados.Emitir.RequestModels;
-using ConObjetosConPolimorfismo;
+using Sujetos;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 

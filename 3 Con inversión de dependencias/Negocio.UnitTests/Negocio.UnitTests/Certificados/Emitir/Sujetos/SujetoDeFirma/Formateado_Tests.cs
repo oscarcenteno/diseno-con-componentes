@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConObjetosConPolimorfismo;
+using Sujetos;
 
-namespace ConObjetosConPolimorfismo_Tests.SujetoDeFirma_Tests
+namespace Sujetos_Tests.SujetoDeFirma_Tests
 {
     [TestClass()]
     public class Formateado_Tests: EscenarioBase_Tests
@@ -9,7 +9,7 @@ namespace ConObjetosConPolimorfismo_Tests.SujetoDeFirma_Tests
         [TestMethod()]
         public void Formateado_DeFirmaParaUnNacional()
         {
-            elResultadoEsperado = Sujetos.UnSujetoDeFirmaParaUnNacional();
+            elResultadoEsperado = EscenariosDeSujetos.UnSujetoDeFirmaParaUnNacional();
 
             InicialiceUnNacional();
             elResultadoObtenido = new SujetoDeFirma(elSolicitante).Formateado();
@@ -20,7 +20,7 @@ namespace ConObjetosConPolimorfismo_Tests.SujetoDeFirma_Tests
         [TestMethod()]
         public void Formateado_DeFirmaParaUnExtranjero()
         {
-            elResultadoEsperado = Sujetos.UnSujetoDeFirmaParaUnExtranjero();
+            elResultadoEsperado = EscenariosDeSujetos.UnSujetoDeFirmaParaUnExtranjero();
 
             InicialiceUnExtranjero();
             elResultadoObtenido = new SujetoDeFirma(elSolicitante).Formateado();
@@ -31,7 +31,7 @@ namespace ConObjetosConPolimorfismo_Tests.SujetoDeFirma_Tests
         [TestMethod()]
         public void Formateado_DeFirmaParaUnExtranjeroConUnSoloApellido()
         {
-            elResultadoEsperado = Sujetos.UnSujetoDeFirmaParaUnExtranjeroConUnSoloApellido();
+            elResultadoEsperado = EscenariosDeSujetos.UnSujetoDeFirmaParaUnExtranjeroConUnSoloApellido();
 
             InicialiceUnExtranjeroConUnSoloApellido();
             elResultadoObtenido = new SujetoDeFirma(elSolicitante).Formateado();

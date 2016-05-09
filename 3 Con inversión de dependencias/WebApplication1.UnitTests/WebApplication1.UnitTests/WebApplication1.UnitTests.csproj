@@ -45,11 +45,14 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Certificados\Emitir\RequestModels\UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +60,12 @@
     <Folder Include="Certificados\Consultas\ViewModels\EmisionRealizadaVista\" />
     <Folder Include="Certificados\Emitir\RequestModels\DatosDelExtranjero\" />
     <Folder Include="Certificados\Emitir\RequestModels\DatosDelNacional\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\WebApplication1\WebApplication1.csproj">
+      <Project>{81e520bb-c980-48f6-b5c7-a6dcac0503ba}</Project>
+      <Name>WebApplication1</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

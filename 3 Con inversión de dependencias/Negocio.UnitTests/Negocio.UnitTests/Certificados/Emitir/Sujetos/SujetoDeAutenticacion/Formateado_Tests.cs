@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConObjetosConPolimorfismo;
+using Sujetos;
 
-namespace ConObjetosConPolimorfismo_Tests.SujetoDeAutenticacion_Tests
+namespace Sujetos_Tests.SujetoDeAutenticacion_Tests
 {
     [TestClass()]
     public class Formateado_Tests: EscenarioBase_Tests
@@ -9,7 +9,7 @@ namespace ConObjetosConPolimorfismo_Tests.SujetoDeAutenticacion_Tests
         [TestMethod()]
         public void Formateado_DeAutenticacionParaUnNacional()
         {
-            elResultadoEsperado = Sujetos.UnSujetoDeAutenticacionParaUnNacional();
+            elResultadoEsperado = EscenariosDeSujetos.UnSujetoDeAutenticacionParaUnNacional();
 
             InicialiceUnNacional();
             elResultadoObtenido = new SujetoDeAutenticacion(elSolicitante).Formateado();
@@ -20,7 +20,7 @@ namespace ConObjetosConPolimorfismo_Tests.SujetoDeAutenticacion_Tests
         [TestMethod()]
         public void Formateado_DeAutenticacionParaUnExtranjero()
         {
-            elResultadoEsperado = Sujetos.UnSujetoDeAutenticacionParaUnExtranjero();
+            elResultadoEsperado = EscenariosDeSujetos.UnSujetoDeAutenticacionParaUnExtranjero();
 
             InicialiceUnExtranjero();
             elResultadoObtenido = new SujetoDeAutenticacion(elSolicitante).Formateado();
@@ -31,7 +31,7 @@ namespace ConObjetosConPolimorfismo_Tests.SujetoDeAutenticacion_Tests
         [TestMethod()]
         public void Formateado_DeAutenticacionParaUnExtranjeroConUnSoloApellido()
         {
-            elResultadoEsperado = Sujetos.UnSujetoDeAutenticacionParaUnExtranjeroConUnSoloApellido();
+            elResultadoEsperado = EscenariosDeSujetos.UnSujetoDeAutenticacionParaUnExtranjeroConUnSoloApellido();
 
             InicialiceUnExtranjeroConUnSoloApellido();
             elResultadoObtenido = new SujetoDeAutenticacion(elSolicitante).Formateado();

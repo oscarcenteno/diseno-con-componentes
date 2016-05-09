@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConObjetosConPolimorfismo;
+using Sujetos;
 
-namespace ConObjetosConPolimorfismo_Tests.GivenName_Tests
+namespace Sujetos_Tests.GivenName_Tests
 {
     [TestClass()]
     public class ComoTexto_Tests : EscenarioBase_Tests

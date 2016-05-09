@@ -1,4 +1,4 @@
-﻿using ConObjetosConPolimorfismo;
+﻿using Sujetos;
 using System;
 
 namespace Negocio.Certificados.Emitir

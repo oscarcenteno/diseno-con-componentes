@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ConObjetosConPolimorfismo_Tests.SolicitanteNacional_Tests
+namespace Sujetos_Tests.SolicitanteNacional_Tests
 {
     [TestClass()]
     public class OU_Tests : EscenarioBase_Tests

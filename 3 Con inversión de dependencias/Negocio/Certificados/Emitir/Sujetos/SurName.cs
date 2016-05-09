@@ -1,4 +1,4 @@
-﻿namespace ConObjetosConPolimorfismo
+﻿namespace Sujetos
 {
     public class SurName
     {

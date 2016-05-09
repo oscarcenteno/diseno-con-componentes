@@ -1,4 +1,4 @@
-﻿using ConObjetosConPolimorfismo;
+﻿using Sujetos;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Negocio.Certificados.Emitir;
 using NSubstitute;

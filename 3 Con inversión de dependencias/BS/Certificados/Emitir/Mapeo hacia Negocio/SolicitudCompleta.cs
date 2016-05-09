@@ -1,6 +1,6 @@
 ﻿using System;
 using Negocio.Certificados.Emitir;
-using ConObjetosConPolimorfismo;
+using Sujetos;
 using DS.Certificados.Emitir;
 
 namespace BS.Certificados.Emitir

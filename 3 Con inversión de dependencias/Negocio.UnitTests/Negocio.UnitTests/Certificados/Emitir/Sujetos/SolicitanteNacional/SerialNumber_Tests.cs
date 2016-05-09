@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ConObjetosConPolimorfismo_Tests.SolicitanteNacional_Tests
+namespace Sujetos_Tests.SolicitanteNacional_Tests
 {
     [TestClass()]
     public class SerialNumber_Tests : EscenarioBase_Tests

@@ -1,4 +1,4 @@
-﻿class Sujetos
+﻿class EscenariosDeSujetos
 {
     public static string UnSujetoDeAutenticacionParaUnNacional()
     {

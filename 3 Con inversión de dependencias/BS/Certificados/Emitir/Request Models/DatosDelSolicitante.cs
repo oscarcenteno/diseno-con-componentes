@@ -1,4 +1,4 @@
-﻿using ConObjetosConPolimorfismo;
+﻿using Sujetos;
 
 namespace BS.Certificados.Emitir.RequestModels
 {
