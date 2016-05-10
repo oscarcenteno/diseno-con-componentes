@@ -1,22 +1,22 @@
-﻿using Models;
-using System.Collections.Generic;
+﻿using Models.Certificados;
+using System.Linq;
 
-namespace DS
+namespace DS.Certificados.Emitir
 {
     public class RepositorioDeCertificados
     {
-        public void Agregue(Emision laEmision)
+        public void Agregue(RegistroDeEmision laEmision)
         {
             EmisionDBContext db = new EmisionDBContext();
             db.Emisiones.Add(laEmision);
             db.SaveChanges();
         }
 
-        public void Agregue(List<Certificado> losCertificados)
+        public string ObtengaElCrl()
         {
+            const string crl = "crl";
             EmisionDBContext db = new EmisionDBContext();
-            db.Certificados.AddRange(losCertificados);
-            db.SaveChanges();
+            return db.Parametros.Where(c => c.Nombre == crl).First().Valor;
         }
     }
 }

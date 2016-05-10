@@ -1,24 +1,24 @@
 ﻿using System.Collections.Generic;
 using System.Net;
 using System.Web.Mvc;
-using Models;
+using Models.Certificados;
 
 namespace WebApplication1.Controllers
 {
-    public class EmisionesController : Controller
+    public class CertificadosController : Controller
     {
-        // GET: Emisiones
+        // GET: Certificados
         public ActionResult Index()
         {
             BS.ConsultasDeCertificados elConsultante = new BS.ConsultasDeCertificados();
 
-            List<Emision> lasEmisiones;
+            List<RegistroDeEmision> lasEmisiones;
             lasEmisiones = elConsultante.ConsulteTodasLasEmisiones();
 
             return View(lasEmisiones);
         }
 
-        // GET: Emisiones/Details/5
+        // GET: Certificados/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
@@ -27,34 +27,34 @@ namespace WebApplication1.Controllers
             }
 
             BS.ConsultasDeCertificados elConsultante = new BS.ConsultasDeCertificados();
-            List<Certificado> losCertificados;
+            List<RegistroDeCertificado> losCertificados;
             losCertificados = elConsultante.ConsulteLosCertificadosDeUnaEmision(id);
 
             return View(losCertificados);
         }
 
-        // GET: Emisiones/Create
+        // GET: Certificados/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Emisiones/Create
+        // POST: Certificados/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Identificacion,TipoDeIdentificacion,Nombre,PrimerApellido,SegundoApellido")] Emision laEmision)
+        public ActionResult Create([Bind(Include = "Identificacion,TipoDeIdentificacion,Nombre,PrimerApellido,SegundoApellido")] DatosDelSolicitante losDatos)
         {
             if (ModelState.IsValid)
             {
                 BS.EmisorDeCertificados elEmisor = new BS.EmisorDeCertificados();
-                elEmisor.EmitaLosCertificados(laEmision);
+                elEmisor.EmitaLosCertificados(losDatos);
 
                 return RedirectToAction("Index");
             }
 
-            return View(laEmision);
+            return View(losDatos);
         }
     }
 }

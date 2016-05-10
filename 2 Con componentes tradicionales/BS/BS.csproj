@@ -50,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Certificados\Emitir\EmisorDeCertificados.cs" />
-    <Compile Include="Certificados\Emitir\GeneracionDeSujetos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

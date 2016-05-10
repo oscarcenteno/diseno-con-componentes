@@ -167,7 +167,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\EmisionesController.cs" />
+    <Compile Include="Controllers\CertificadosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -209,9 +209,9 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Emisiones\Create.cshtml" />
-    <Content Include="Views\Emisiones\Details.cshtml" />
-    <Content Include="Views\Emisiones\Index.cshtml" />
+    <Content Include="Views\Certificados\Create.cshtml" />
+    <Content Include="Views\Certificados\Details.cshtml" />
+    <Content Include="Views\Certificados\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -254,9 +254,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>62920</DevelopmentServerPort>
+          <DevelopmentServerPort>62921</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:62920/</IISUrl>
+          <IISUrl>http://localhost:62921/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

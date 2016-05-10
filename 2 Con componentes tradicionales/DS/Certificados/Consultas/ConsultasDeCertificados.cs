@@ -1,5 +1,5 @@
 ﻿using DS;
-using Models;
+using Models.Certificados;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,14 +9,14 @@ namespace BS
     {
         private EmisionDBContext db = new EmisionDBContext();
 
-        public List<Emision> ConsulteTodasLasEmisiones()
+        public List<RegistroDeEmision> ConsulteTodasLasEmisiones()
         {
             return db.Emisiones.ToList();
         }
 
-        public List<Certificado> ConsulteLosCertificadosDeUnaEmision(string id)
+        public List<RegistroDeCertificado> ConsulteLosCertificadosDeUnaEmision(string id)
         {
-            return db.Certificados.Where(c => c.EmisionID == id).ToList();
+            return db.Certificados.Where(c => c.SolicitanteID == id).ToList();
         }
 
     }

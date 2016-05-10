@@ -1,4 +1,4 @@
-﻿@model List<Models.Certificado>
+﻿@model IEnumerable<Models.Certificados.RegistroDeCertificado>
 
 @{
     ViewBag.Title = "Certificados emitidos";
@@ -10,22 +10,22 @@
     <table class="table">
         <tr>
             <th>
-                # Emision
+                @Html.DisplayNameFor(model => model.Sujeto)
             </th>
-            <th>Sujeto
+            <th>
+                @Html.DisplayNameFor(model => model.FechaDeEmision)
             </th>
-            <th>FechaDeEmision
+            <th>
+                @Html.DisplayNameFor(model => model.FechaDeVencimiento)
             </th>
-            <th>FechaDeVencimiento
+            <th>
+                @Html.DisplayNameFor(model => model.Crl)
             </th>
         </tr>
 
         @foreach (var item in Model)
         {
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.EmisionID)
-                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Sujeto)
                 </td>
@@ -35,11 +35,14 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.FechaDeVencimiento)
                 </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Crl)
+                </td>
             </tr>
         }
 
     </table>
 </div>
 <p>
-    @Html.ActionLink("Regresar a la lista de emisiones", "Index")
+    @Html.ActionLink("Regresar a la lista de emisiones realizadas", "Index")
 </p>

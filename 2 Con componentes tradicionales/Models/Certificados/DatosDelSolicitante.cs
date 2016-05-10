@@ -1,13 +1,10 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Models
+namespace Models.Certificados
 {
-    public class Emision
+    public class DatosDelSolicitante
     {
-        [Required]
-        public string ID { get; set; }
-
         [Required]
         [DisplayName("Identificación")]
         public string Identificacion { get; set; }

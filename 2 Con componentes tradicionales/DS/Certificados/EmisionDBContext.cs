@@ -1,17 +1,18 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using Models;
+using Models.Certificados;
 
 namespace DS
 {
-    internal class EmisionDBContext : DbContext
+    public class EmisionDBContext : DbContext
     {
-        public DbSet<Emision> Emisiones { get; set; } 
-        public DbSet<Certificado> Certificados { get; set; }
+        public DbSet<RegistroDeEmision> Emisiones { get; set; } 
+        public DbSet<RegistroDeCertificado> Certificados { get; set; }
+        public DbSet<RegistroDeParametro> Parametros { get; set; }
 
         static EmisionDBContext()
         {
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<EmisionDBContext>());
+            Database.SetInitializer(new EmisionDBInitializer());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
