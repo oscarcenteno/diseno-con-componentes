@@ -4,24 +4,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DS.Certificados
 {
-    public class RegistroDeCertificado
+    public class RegistroDeParametro
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
         [Required]
-        public string SolicitanteID { get; set; }
+        public string Nombre { get; set; }
 
         [Required]
-        public string Sujeto { get; set; }
+        public string Valor { get; set; }
 
         [Required]
-        public DateTime FechaDeEmision { get; set; }
-
-        [Required]
-        public DateTime FechaDeVencimiento { get; set; }
-
-        [Required]
-        public string Crl { get; set; }
+        public DateTime FechaDeRegistro { get; set; }
     }
 }
