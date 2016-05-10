@@ -167,15 +167,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\EmisionesController.cs" />
+    <Compile Include="Controllers\CertificadosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Certificado.cs" />
-    <Compile Include="Controllers\EmisionDBContext.cs" />
-    <Compile Include="Controllers\GeneracionDeSujetos.cs" />
+    <Compile Include="Models\RegistroDeCertificado.cs" />
+    <Compile Include="Models\EmisionDBContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Emision.cs" />
+    <Compile Include="Models\DatosDelSolicitante.cs" />
+    <Compile Include="Models\EmisionDBInitializer.cs" />
+    <Compile Include="Models\RegistroDeEmision.cs" />
+    <Compile Include="Models\RegistroDeParametro.cs" />
     <Compile Include="Models\TipoDeCertificado.cs" />
     <Compile Include="Models\TipoDeIdentificacioncs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -216,9 +218,9 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Emisiones\Create.cshtml" />
-    <Content Include="Views\Emisiones\Details.cshtml" />
-    <Content Include="Views\Emisiones\Index.cshtml" />
+    <Content Include="Views\Certificados\Create.cshtml" />
+    <Content Include="Views\Certificados\Details.cshtml" />
+    <Content Include="Views\Certificados\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -3,11 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebApplication1.Models
 {
-    public class Emision
+    public class DatosDelSolicitante
     {
-        [Required]
-        public string ID { get; set; }
-
         [Required]
         [DisplayName("Identificación")]
         public string Identificacion { get; set; }
