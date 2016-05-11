@@ -49,8 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Certificados\Consultas\RegistrosDeCertificadosDeUnaEmision.cs" />
-    <Compile Include="Certificados\Consultas\RegistrosDeEmision.cs" />
+    <Compile Include="Certificados\Consultas\RepositorioDeCertificados.cs" />
+    <Compile Include="Certificados\Consultas\RepositorioDeEmisiones.cs" />
     <Compile Include="Certificados\EmisionDBContext.cs" />
     <Compile Include="Certificados\EmisionDBInitializer.cs" />
     <Compile Include="Certificados\Emitir\Repositorio.cs" />
@@ -59,12 +59,6 @@
     <Compile Include="Certificados\RegistroDeEmision.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Negocio\Negocio.csproj">
-      <Project>{a2bfbcea-aaf7-4d09-9f75-c4eb6fa7d355}</Project>
-      <Name>Negocio</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

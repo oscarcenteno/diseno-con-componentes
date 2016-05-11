@@ -8,7 +8,6 @@ namespace WebApplication1.UnitTests.Certificados.Emitir.RequestModels
         [TestMethod]
         public void TestMethod1()
         {
-            new BS.Certificados.Consultas.CertificadoEmitido();
         }
     }
 }

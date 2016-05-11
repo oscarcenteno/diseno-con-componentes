@@ -40,10 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Certificados\Emitir\Emision.cs" />
-    <Compile Include="Certificados\Emitir\Certificados\CertificadoDeAutenticacion.cs" />
-    <Compile Include="Certificados\Emitir\Certificados\CertificadoDeFirma.cs" />
-    <Compile Include="Certificados\Emitir\Certificados\Certificado.cs" />
-    <Compile Include="Certificados\Emitir\Certificados\ListaDeCertificados.cs" />
+    <Compile Include="Certificados\Emitir\CertificadoDeAutenticacion.cs" />
+    <Compile Include="Certificados\Emitir\CertificadoDeFirma.cs" />
+    <Compile Include="Certificados\Emitir\Certificado.cs" />
+    <Compile Include="Certificados\Emitir\ListaDeCertificados.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\Apellidos.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\ApellidosFormateados.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\CN.cs" />

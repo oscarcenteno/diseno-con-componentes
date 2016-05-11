@@ -1,10 +1,10 @@
 ﻿using System;
 using System.ComponentModel;
-using BS.Certificados.Consultas;
 using System.Threading;
 using System.Globalization;
+using BS.Certificados.ConsultarLosCertificados;
 
-namespace WebApplication1.ViewModels
+namespace WebApplication1.Certificados.ConsultarLosCertificados.ViewModels
 {
     public class CertificadoEmitidoVista
     {
@@ -17,7 +17,6 @@ namespace WebApplication1.ViewModels
             laFechaDeEmision = elCertificado.FechaDeEmision;
             laFechaDeVencimiento = elCertificado.FechaDeVencimiento;
             Crl = elCertificado.Crl;
-
         }
 
         public string Sujeto { get; private set; }

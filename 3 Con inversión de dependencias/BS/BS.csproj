@@ -48,19 +48,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Certificados\Consultas\Response Models\CertificadoEmitido.cs" />
-    <Compile Include="Certificados\Consultas\Response Models\EmisionCompletada.cs" />
-    <Compile Include="Certificados\Consultas\ServicioDeConsultas.cs" />
-    <Compile Include="Certificados\Emitir\Mapeo hacia Base de datos\ListaDeRegistrosDeCertificados.cs" />
-    <Compile Include="Certificados\Emitir\Mapeo hacia Base de datos\EmisionMapeable.cs" />
-    <Compile Include="Certificados\Emitir\Mapeo hacia Base de datos\MapeoDeRegistrosDeCertificados.cs" />
-    <Compile Include="Certificados\Emitir\Mapeo hacia Base de datos\RegistroDeEmisionMapeable.cs" />
-    <Compile Include="Certificados\Emitir\Mapeo hacia Base de datos\RegistroDeCertificadoMapeable.cs" />
+    <Compile Include="Certificados\Consultar los certificados\ConsultasDeCertificados.cs" />
+    <Compile Include="Certificados\Consultar los certificados\Response Models\ListaDeCertificadosEmitidos.cs" />
+    <Compile Include="Certificados\Consultar los certificados\Response Models\CertificadoEmitido.cs" />
+    <Compile Include="Certificados\Consultar todas las emisiones\Response Models\ListaDeEmisionesRealizadas.cs" />
+    <Compile Include="Certificados\Consultar todas las emisiones\Response Models\EmisionRealizada.cs" />
+    <Compile Include="Certificados\Consultar todas las emisiones\ConsultasDeEmisiones.cs" />
+    <Compile Include="Certificados\Emitir\Request Models\DatosDeLaSolicitud.cs" />
+    <Compile Include="Certificados\Emitir\Mapeo hacia DS\MapeoARegistrosDeCertificados.cs" />
+    <Compile Include="Certificados\Emitir\Mapeo hacia DS\ListaDeRegistrosDeCertificados.cs" />
+    <Compile Include="Certificados\Emitir\Mapeo hacia DS\MapeoAlRegistroDeEmision.cs" />
+    <Compile Include="Certificados\Emitir\Mapeo hacia DS\MapeoARegistroDeCertificado.cs" />
     <Compile Include="Certificados\Emitir\Request Models\DatosDelSolicitante.cs" />
     <Compile Include="Certificados\Emitir\ServicioDeEmision.cs" />
-    <Compile Include="Certificados\Emitir\ProcesoDeEmision.cs" />
-    <Compile Include="Certificados\Emitir\Mapeo hacia Negocio\SolicitudCompleta.cs" />
-    <Compile Include="Certificados\Emitir\Mapeo hacia Negocio\MapeoDeDatosDelSolicitante.cs" />
+    <Compile Include="Certificados\Emitir\Request Models\SolicitudCompleta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

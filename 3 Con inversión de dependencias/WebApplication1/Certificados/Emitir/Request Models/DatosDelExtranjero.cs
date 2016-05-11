@@ -1,9 +1,9 @@
 ﻿using BS.Certificados.Emitir.RequestModels;
-using Sujetos;
+using Negocio.Certificados.Emitir.Sujetos;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication1.RequestModels
+namespace WebApplication1.Certificados.Emitir.RequestModels
 {
     public class DatosDelExtranjero: DatosDelSolicitante
     {

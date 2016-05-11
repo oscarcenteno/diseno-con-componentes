@@ -1,4 +1,4 @@
-﻿using Sujetos;
+﻿using Negocio.Certificados.Emitir.Sujetos;
 
 namespace BS.Certificados.Emitir.RequestModels
 {

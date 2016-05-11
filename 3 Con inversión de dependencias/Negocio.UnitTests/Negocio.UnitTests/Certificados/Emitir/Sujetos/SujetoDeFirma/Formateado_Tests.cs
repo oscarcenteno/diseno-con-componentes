@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Sujetos;
+using Negocio.Certificados.Emitir.Sujetos;
 
 namespace Sujetos_Tests.SujetoDeFirma_Tests
 {

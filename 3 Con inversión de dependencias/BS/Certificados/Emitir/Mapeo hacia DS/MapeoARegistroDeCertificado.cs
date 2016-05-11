@@ -1,9 +1,9 @@
 ﻿using DS.Certificados;
 using Negocio.Certificados.Emitir;
 
-namespace BS.Certificados.Emitir
+namespace BS.Certificados.Emitir.MapeoHaciaDS
 {
-    public static class RegistroDeCertificadoMapeable
+    public static class MapeoARegistroDeCertificado
     {
         public static RegistroDeCertificado Mapee(Certificado elCertificado)
         {

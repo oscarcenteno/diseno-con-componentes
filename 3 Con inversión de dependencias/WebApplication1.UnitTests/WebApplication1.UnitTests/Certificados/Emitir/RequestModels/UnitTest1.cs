@@ -9,7 +9,6 @@ namespace WebApplication1.UnitTests.Certificados.Emitir.RequestModels
         [TestMethod]
         public void TestMethod1()
         {
-            new WebApplication1.RequestModels.DatosDelExtranjero();
         }
     }
 }

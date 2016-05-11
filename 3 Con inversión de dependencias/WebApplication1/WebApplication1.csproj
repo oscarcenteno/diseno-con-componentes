@@ -168,6 +168,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\CertificadosController.cs" />
+    <Compile Include="Certificados\Consultar los certificados\View Models\ListaDeCertificadosEmitidosVista.cs" />
+    <Compile Include="Certificados\Consultar todas las emisiones\View Models\ListaDeEmisionRealizadaVista.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -175,8 +177,8 @@
     <Compile Include="Certificados\Emitir\Request Models\DatosDelExtranjero.cs" />
     <Compile Include="Certificados\Emitir\Request Models\DatosDelNacional.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Certificados\Consultas\View Models\CertificadoEmitidoVista.cs" />
-    <Compile Include="Certificados\Consultas\View Models\EmisionRealizadaVista.cs" />
+    <Compile Include="Certificados\Consultar los certificados\View Models\CertificadoEmitidoVista.cs" />
+    <Compile Include="Certificados\Consultar todas las emisiones\View Models\EmisionRealizadaVista.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />

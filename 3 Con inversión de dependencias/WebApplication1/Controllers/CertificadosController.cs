@@ -1,12 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Net;
 using System.Web.Mvc;
-using BS.Certificados.Consultas;
-using BS.Certificados.Emitir;
-using WebApplication1.RequestModels;
-using WebApplication1.ViewModels;
 
-namespace WebApplication1.Services
+using WebApplication1.Certificados.Emitir.RequestModels;
+using BS.Certificados.Emitir;
+
+using WebApplication1.Certificados.ConsultarLosCertificados.ViewModels;
+using BS.Certificados.ConsultarLosCertificados;
+
+using WebApplication1.Certificados.ConsultarTodasLasEmisiones.ViewModels;
+using BS.Certificados.ConsultarTodasLasEmisiones;
+
+namespace WebApplication1.Controllers
 {
     public class CertificadosController : Controller
     {
@@ -14,23 +19,15 @@ namespace WebApplication1.Services
         public ActionResult Index()
         {
             List<EmisionRealizadaVista> lasEmisiones = ObtengaLasEmisionesParaMostrar();
-
             return View(lasEmisiones);
         }
 
-        // TODO: Extraer 
         private static List<EmisionRealizadaVista> ObtengaLasEmisionesParaMostrar()
         {
             List<EmisionRealizada> lasEmisiones;
-            lasEmisiones = new ServicioDeConsultas().ConsulteTodasLasEmisiones();
+            lasEmisiones = ConsultasDeEmisiones.ConsulteTodas();
 
-            List<EmisionRealizadaVista> lasVistas = new List<EmisionRealizadaVista>();
-            foreach (EmisionRealizada laEmision in lasEmisiones)
-            {
-                lasVistas.Add(new EmisionRealizadaVista(laEmision));
-            }
-
-            return lasVistas;
+            return new ListaDeEmisionesRealizadasVista(lasEmisiones);
         }
 
         // GET: Certificados/Details/5
@@ -50,17 +47,9 @@ namespace WebApplication1.Services
         private static List<CertificadoEmitidoVista> ObtengaLosCertificadosParaMostrar(string id)
         {
             List<CertificadoEmitido> losCertificados;
-            losCertificados = new ServicioDeConsultas().ConsulteLosCertificadosPorId(id);
+            losCertificados = ConsultasDeCertificados.ConsultePorId(id);
 
-            List<CertificadoEmitidoVista> lasVistas;
-            lasVistas = new List<CertificadoEmitidoVista>();
-
-            foreach (CertificadoEmitido elCertificado in losCertificados)
-            {
-                lasVistas.Add(new CertificadoEmitidoVista(elCertificado));
-            }
-
-            return lasVistas;
+            return new ListaDeCertificadosEmitidosVista(losCertificados);
         }
 
         // GET: Certificados/EmitaANacional
@@ -70,15 +59,13 @@ namespace WebApplication1.Services
         }
 
         // POST: Certificados/EmitaANacional
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EmitaANacional([Bind(Include = "Identificacion,Nombre,PrimerApellido,SegundoApellido")] DatosDelNacional losDatos)
+        public ActionResult EmitaANacional(DatosDelNacional losDatos)
         {
             if (ModelState.IsValid)
             {
-                new ServicioDeEmision(losDatos).Ejecute();
+                ServicioDeEmision.Ejecute(losDatos);
 
                 return RedirectToAction("Index");
             }
@@ -92,17 +79,14 @@ namespace WebApplication1.Services
             return View();
         }
 
-        // POST: Certificados/EmitaAExtranjero
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Certificados/EmitaAExatranjero
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EmitaAExtranjero([Bind(Include = "Identificacion,Nombre,PrimerApellido,SegundoApellido")] DatosDelExtranjero losDatos)
+        public ActionResult EmitaAExtranjero(DatosDelExtranjero losDatos)
         {
             if (ModelState.IsValid)
             {
-                new ServicioDeEmision(losDatos).Ejecute();
-
+                ServicioDeEmision.Ejecute(losDatos);
                 return RedirectToAction("Index");
             }
 

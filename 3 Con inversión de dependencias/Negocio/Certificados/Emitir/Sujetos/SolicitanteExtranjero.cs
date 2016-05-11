@@ -1,4 +1,4 @@
-﻿namespace Sujetos
+﻿namespace Negocio.Certificados.Emitir.Sujetos
 {
     public class SolicitanteExtranjero : Solicitante
     {

@@ -1,4 +1,4 @@
-﻿using Sujetos;
+﻿using Negocio.Certificados.Emitir.Sujetos;
 using System;
 
 namespace Negocio.Certificados.Emitir

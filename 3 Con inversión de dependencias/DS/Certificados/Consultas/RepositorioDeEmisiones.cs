@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace DS.Certificados.Consultas
 {
-    public class RegistrosDeEmision
+    public static class RepositorioDeEmisiones
     {
-        public List<RegistroDeEmision> ComoLista()
+        public static List<RegistroDeEmision> ConsulteTodas()
         {
             return new EmisionDBContext().Emisiones.ToList();
         }
