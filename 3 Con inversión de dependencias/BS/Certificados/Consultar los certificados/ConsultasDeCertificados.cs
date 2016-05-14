@@ -1,5 +1,6 @@
 ﻿using DS.Certificados;
 using DS.Certificados.Consultas;
+using Mapeable;
 using System.Collections.Generic;
 
 namespace BS.Certificados.ConsultarLosCertificados
@@ -16,7 +17,7 @@ namespace BS.Certificados.ConsultarLosCertificados
 
         private static List<CertificadoEmitido> Mapee(List<RegistroDeCertificado> losRegistros)
         {
-            return new ListaDeCertificadosEmitidos(losRegistros);
+            return new MapeoDeColecciones<RegistroDeCertificado, CertificadoEmitido>().Mapee(losRegistros);
         }
     }
 }

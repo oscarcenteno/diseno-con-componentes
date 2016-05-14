@@ -8,36 +8,28 @@ namespace WebApplication1.Certificados.ConsultarLosCertificados.ViewModels
 {
     public class CertificadoEmitidoVista
     {
-        private DateTime laFechaDeEmision;
-        private DateTime laFechaDeVencimiento;
-
-        public CertificadoEmitidoVista(CertificadoEmitido elCertificado)
-        {
-            Sujeto = elCertificado.Sujeto;
-            laFechaDeEmision = elCertificado.FechaDeEmision;
-            laFechaDeVencimiento = elCertificado.FechaDeVencimiento;
-            Crl = elCertificado.Crl;
-        }
+        public DateTime FechaDeEmision { get; private set; }
+        public DateTime FechaDeVencimiento { get; private set; }
 
         public string Sujeto { get; private set; }
 
         [DisplayName("Fecha de emisión")]
-        public string FechaDeEmision
+        public string FechaDeEmisionFormateada
         {
             get
             {
                 Thread.CurrentThread.CurrentCulture = new CultureInfo("es-ES");
-                return laFechaDeEmision.ToLongDateString();
+                return FechaDeEmision.ToLongDateString();
             }
         }
 
         [DisplayName("Fecha de vencimiento")]
-        public string FechaDeVencimiento
+        public string FechaDeVencimientoFormateada
         {
             get
             {
                 Thread.CurrentThread.CurrentCulture = new CultureInfo("es-ES");
-                return laFechaDeVencimiento.ToLongDateString();
+                return FechaDeEmision.ToLongDateString();
             }
         }
 

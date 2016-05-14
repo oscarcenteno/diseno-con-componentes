@@ -1,6 +1,7 @@
 ﻿using DS.Certificados;
 using System.Collections.Generic;
 using Negocio.Certificados.Emitir;
+using Mapeable;
 
 namespace BS.Certificados.Emitir.MapeoHaciaDS
 {
@@ -15,7 +16,7 @@ namespace BS.Certificados.Emitir.MapeoHaciaDS
 
         public List<RegistroDeCertificado> ComoListaMapeada()
         {
-            return new ListaDeRegistrosDeCertificados(losCertificados);
+            return new MapeoDeColecciones<Certificado, RegistroDeCertificado>().Mapee(losCertificados);
         }
     }
 }

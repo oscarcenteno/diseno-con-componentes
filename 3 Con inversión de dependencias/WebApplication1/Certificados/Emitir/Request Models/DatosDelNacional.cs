@@ -1,4 +1,5 @@
 ﻿using BS.Certificados.Emitir.RequestModels;
+using Mapeable;
 using Negocio.Certificados.Emitir.Sujetos;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -23,13 +24,7 @@ namespace WebApplication1.Certificados.Emitir.RequestModels
 
         public override Solicitante ComoSolicitante()
         {
-            SolicitanteNacional elSolicitante = new SolicitanteNacional();
-            elSolicitante.Nombre = Nombre;
-            elSolicitante.PrimerApellido = PrimerApellido;
-            elSolicitante.SegundoApellido = SegundoApellido;
-            elSolicitante.Identificacion = Identificacion;
-
-            return elSolicitante;
+            return new Mapeo<DatosDelNacional, SolicitanteNacional>().Mapee(this);
         }
     }
 }

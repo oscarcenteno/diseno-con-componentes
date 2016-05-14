@@ -23,6 +23,7 @@ namespace Negocio.Certificados.Emitir
             return new ListaDeCertificados(laSolicitud);
         }
 
+        // TODO: private set?
         public List<Certificado> Certificados
         {
             get
@@ -31,6 +32,7 @@ namespace Negocio.Certificados.Emitir
             }
         }
 
+        // TODO: private set?
         public string Identificacion
         {
             get

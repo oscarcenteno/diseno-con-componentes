@@ -11,6 +11,8 @@ using BS.Certificados.ConsultarLosCertificados;
 using WebApplication1.Certificados.ConsultarTodasLasEmisiones.ViewModels;
 using BS.Certificados.ConsultarTodasLasEmisiones;
 
+using Mapeable;
+
 namespace WebApplication1.Controllers
 {
     public class CertificadosController : Controller
@@ -24,10 +26,19 @@ namespace WebApplication1.Controllers
 
         private static List<EmisionRealizadaVista> ObtengaLasEmisionesParaMostrar()
         {
-            List<EmisionRealizada> lasEmisiones;
-            lasEmisiones = ConsultasDeEmisiones.ConsulteTodas();
+            List<EmisionRealizada> lasEmisiones = ConsulteTodasLasEmisiones();
 
-            return new ListaDeEmisionesRealizadasVista(lasEmisiones);
+            return MapeeALaVista(lasEmisiones);
+        }
+
+        private static List<EmisionRealizadaVista> MapeeALaVista(List<EmisionRealizada> lasEmisiones)
+        {
+            return new MapeoDeColecciones<EmisionRealizada, EmisionRealizadaVista>().Mapee(lasEmisiones);
+        }
+
+        private static List<EmisionRealizada> ConsulteTodasLasEmisiones()
+        {
+            return ConsultasDeEmisiones.ConsulteTodas();
         }
 
         // GET: Certificados/Details/5
@@ -39,17 +50,27 @@ namespace WebApplication1.Controllers
             }
 
             List<CertificadoEmitidoVista> losCertificados;
-            losCertificados = ObtengaLosCertificadosParaMostrar(id);
+            losCertificados = ObtengaLosCertificados(id);
 
             return View(losCertificados);
         }
 
-        private static List<CertificadoEmitidoVista> ObtengaLosCertificadosParaMostrar(string id)
+        private static List<CertificadoEmitidoVista> ObtengaLosCertificados(string id)
         {
             List<CertificadoEmitido> losCertificados;
-            losCertificados = ConsultasDeCertificados.ConsultePorId(id);
+            losCertificados = ConsulteLosCertificados(id);
 
-            return new ListaDeCertificadosEmitidosVista(losCertificados);
+            return MapeeALaVista(losCertificados);
+        }
+
+        private static List<CertificadoEmitido> ConsulteLosCertificados(string id)
+        {
+            return ConsultasDeCertificados.ConsultePorId(id);
+        }
+
+        private static List<CertificadoEmitidoVista> MapeeALaVista(List<CertificadoEmitido> losCertificados)
+        {
+            return new MapeoDeColecciones<CertificadoEmitido, CertificadoEmitidoVista>().Mapee(losCertificados);
         }
 
         // GET: Certificados/EmitaANacional

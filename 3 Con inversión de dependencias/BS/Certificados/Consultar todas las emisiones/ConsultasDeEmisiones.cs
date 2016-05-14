@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using DS.Certificados.Consultas;
 using DS.Certificados;
+using Mapeable;
 
 namespace BS.Certificados.ConsultarTodasLasEmisiones
 {
@@ -17,7 +18,7 @@ namespace BS.Certificados.ConsultarTodasLasEmisiones
 
         private static List<EmisionRealizada> Mapee(List<RegistroDeEmision> losRegistros)
         {
-            return new ListaDeEmisionesRealizadas(losRegistros);
+            return new MapeoDeColecciones<RegistroDeEmision, EmisionRealizada>().Mapee(losRegistros);
         }
     }
 }
