@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace WebApplication1.UnitTests.Certificados.Emitir.RequestModels
+namespace Negocio.UnitTests.Certificados.Emitir.SolicitudDeEmision_Tests
 {
     [TestClass]
     public class UnitTest1

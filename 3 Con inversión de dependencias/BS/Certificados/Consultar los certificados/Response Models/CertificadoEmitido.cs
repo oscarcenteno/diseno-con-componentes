@@ -1,5 +1,4 @@
 ﻿using System;
-using DS.Certificados;
 
 namespace BS.Certificados.ConsultarLosCertificados
 {

@@ -1,6 +1,4 @@
-﻿using DS.Certificados;
-
-namespace BS.Certificados.ConsultarTodasLasEmisiones
+﻿namespace BS.Certificados.ConsultarTodasLasEmisiones
 {
     public class EmisionRealizada
     {

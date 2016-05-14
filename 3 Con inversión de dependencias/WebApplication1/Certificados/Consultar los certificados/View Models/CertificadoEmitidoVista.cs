@@ -1,38 +1,34 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Threading;
-using System.Globalization;
-using BS.Certificados.ConsultarLosCertificados;
 
 namespace WebApplication1.Certificados.ConsultarLosCertificados.ViewModels
 {
     public class CertificadoEmitidoVista
     {
-        public DateTime FechaDeEmision { get; private set; }
-        public DateTime FechaDeVencimiento { get; private set; }
-
-        public string Sujeto { get; private set; }
+        public DateTime FechaDeEmision { get; set; }
 
         [DisplayName("Fecha de emisión")]
         public string FechaDeEmisionFormateada
         {
             get
             {
-                Thread.CurrentThread.CurrentCulture = new CultureInfo("es-ES");
-                return FechaDeEmision.ToLongDateString();
+                return FechaDeEmision.ToString("yyyy-MM-dd");
             }
         }
+
+        public DateTime FechaDeVencimiento { get; set; }
 
         [DisplayName("Fecha de vencimiento")]
         public string FechaDeVencimientoFormateada
         {
             get
             {
-                Thread.CurrentThread.CurrentCulture = new CultureInfo("es-ES");
-                return FechaDeEmision.ToLongDateString();
+                return FechaDeVencimiento.ToString("yyyy-MM-dd");
             }
         }
 
-        public string Crl { get; private set; }
+        public string Sujeto { get; set; }
+
+        public string Crl { get; set; }
     }
 }

@@ -10,11 +10,20 @@ namespace BS.Certificados.Emitir
     {
         public static void Ejecute(DatosDelSolicitante losDatos)
         {
-            SolicitudCompleta laSolicitud = CompleteLaSolicitud(losDatos);
-            Emision laEmision = GenereLaEmision(laSolicitud);
-
-            RegistroDeEmision elRegistro = MapeeAUnRegistroDeEmision(laEmision);
+            RegistroDeEmision elRegistro = ObtengaElRegistroDeEmision(losDatos);
             AgregueABaseDeDatos(elRegistro);
+        }
+
+        private static RegistroDeEmision ObtengaElRegistroDeEmision(DatosDelSolicitante losDatos)
+        {
+            Emision laEmision = ObtengaLaEmision(losDatos);
+            return MapeeAUnRegistroDeEmision(laEmision);
+        }
+
+        private static Emision ObtengaLaEmision(DatosDelSolicitante losDatos)
+        {
+            SolicitudCompleta laSolicitud = CompleteLaSolicitud(losDatos);
+            return GenereLaEmision(laSolicitud);
         }
 
         private static void AgregueABaseDeDatos(RegistroDeEmision elRegistro)

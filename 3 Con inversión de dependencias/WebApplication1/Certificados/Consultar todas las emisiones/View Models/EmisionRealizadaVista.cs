@@ -1,5 +1,4 @@
-﻿using BS.Certificados.ConsultarTodasLasEmisiones;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 
 namespace WebApplication1.Certificados.ConsultarTodasLasEmisiones.ViewModels
 {

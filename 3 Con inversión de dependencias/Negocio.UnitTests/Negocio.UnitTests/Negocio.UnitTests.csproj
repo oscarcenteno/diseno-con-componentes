@@ -52,23 +52,28 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Certificados\Emitir\Certificados\CertificadoDeAutenticacion\SolicitanteID_Tests.cs" />
-    <Compile Include="Certificados\Emitir\Certificados\CertificadoDeAutenticacion\Sujeto_Tests.cs" />
-    <Compile Include="Certificados\Emitir\Certificados\CertificadoDeAutenticacion\FechaDeVencimiento_Tests.cs" />
-    <Compile Include="Certificados\Emitir\Certificados\CertificadoDeAutenticacion\FechaDeEmision_Tests.cs" />
-    <Compile Include="Certificados\Emitir\Certificados\CertificadoDeAutenticacion\Url_Tests.cs" />
-    <Compile Include="Certificados\Emitir\Certificados\CertificadoDeFirma\FechaDeEmision_Tests.cs" />
-    <Compile Include="Certificados\Emitir\Certificados\CertificadoDeFirma\FechaDeVencimiento_Tests.cs" />
-    <Compile Include="Certificados\Emitir\Certificados\CertificadoDeFirma\SolicitanteID_Tests.cs" />
-    <Compile Include="Certificados\Emitir\Certificados\CertificadoDeFirma\Sujeto_Tests.cs" />
-    <Compile Include="Certificados\Emitir\Certificados\CertificadoDeFirma\Url_Tests.cs" />
-    <Compile Include="Certificados\Emitir\Certificados\EscenarioBase_Tests.cs" />
+    <Compile Include="Certificados\Emitir\CertificadoDeAutenticacion\SolicitanteID_Tests.cs" />
+    <Compile Include="Certificados\Emitir\CertificadoDeAutenticacion\Sujeto_Tests.cs" />
+    <Compile Include="Certificados\Emitir\CertificadoDeAutenticacion\FechaDeVencimiento_Tests.cs" />
+    <Compile Include="Certificados\Emitir\CertificadoDeAutenticacion\FechaDeEmision_Tests.cs" />
+    <Compile Include="Certificados\Emitir\CertificadoDeAutenticacion\Url_Tests.cs" />
+    <Compile Include="Certificados\Emitir\CertificadoDeFirma\FechaDeEmision_Tests.cs" />
+    <Compile Include="Certificados\Emitir\CertificadoDeFirma\FechaDeVencimiento_Tests.cs" />
+    <Compile Include="Certificados\Emitir\CertificadoDeFirma\SolicitanteID_Tests.cs" />
+    <Compile Include="Certificados\Emitir\CertificadoDeFirma\Sujeto_Tests.cs" />
+    <Compile Include="Certificados\Emitir\CertificadoDeFirma\Url_Tests.cs" />
+    <Compile Include="Certificados\Emitir\Emision\UnitTest1.cs" />
+    <Compile Include="Certificados\Emitir\EscenarioBase_Tests.cs" />
     <Compile Include="Certificados\Emitir\EscenariosDeSujetos.cs" />
+    <Compile Include="Certificados\Emitir\ListaDeCertificados\UnitTest1.cs" />
+    <Compile Include="Certificados\Emitir\SolicitudDeEmision\UnitTest1.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\ApellidosFormateados\SinEspaciosAlFinal_Tests.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\Apellidos\Formateados_Tests.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\CNDeAutenticacion\Formateados_Tests.cs" />

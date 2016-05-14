@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ComparacionesParaPruebasUnitarias">
+      <HintPath>..\..\referencias\ComparacionesParaPruebasUnitarias.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -52,16 +55,23 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Certificados\Emitir\RequestModels\UnitTest1.cs" />
+    <Compile Include="Certificados\Consultar los certificados\View Models\CertificadoEmitidoVista\FechaDeVencimientoFormateada_Tests.cs" />
+    <Compile Include="Certificados\Consultar los certificados\View Models\CertificadoEmitidoVista\FechaDeEmisionFormateada_Tests.cs" />
+    <Compile Include="Certificados\Consultar todas las emisiones\View Models\EmisionRealizadaVista\FechaDeEmisionFormateada_Tests.cs" />
+    <Compile Include="Certificados\Emitir\RequestModels\DatosDelNacional\ComoSolicitante_Tests.cs" />
+    <Compile Include="Certificados\Emitir\RequestModels\DatosDelExtranjero\ComoSolicitante_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Certificados\Consultas\ViewModels\CertificadoEmitidoVista\" />
-    <Folder Include="Certificados\Consultas\ViewModels\EmisionRealizadaVista\" />
-    <Folder Include="Certificados\Emitir\RequestModels\DatosDelExtranjero\" />
-    <Folder Include="Certificados\Emitir\RequestModels\DatosDelNacional\" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\..\BS\BS.csproj">
+      <Project>{88D8C147-3FBA-4D15-A498-B33193E55694}</Project>
+      <Name>BS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Negocio\Negocio.csproj">
+      <Project>{a2bfbcea-aaf7-4d09-9f75-c4eb6fa7d355}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\WebApplication1\WebApplication1.csproj">
       <Project>{81e520bb-c980-48f6-b5c7-a6dcac0503ba}</Project>
       <Name>WebApplication1</Name>
