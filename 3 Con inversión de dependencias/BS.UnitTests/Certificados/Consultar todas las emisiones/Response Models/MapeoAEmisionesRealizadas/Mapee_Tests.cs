@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using BS.Certificados.ConsultarTodasLasEmisiones;
 using System.Collections.Generic;
 using DS.Certificados;
 using Mapeable.ComparacionesParaPruebasUnitarias;

@@ -1,8 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-
 using Mapeable.ComparacionesParaPruebasUnitarias;
-
 using WebApplication1.Certificados.ConsultarTodasLasEmisiones.ViewModels;
 using BS.Certificados.ConsultarTodasLasEmisiones.ResponseModels;
 
