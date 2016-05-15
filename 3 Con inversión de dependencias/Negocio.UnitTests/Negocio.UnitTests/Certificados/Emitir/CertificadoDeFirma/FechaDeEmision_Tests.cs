@@ -1,11 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Negocio.Certificados.Emitir;
+using Negocio.UnitTests.Certificados.Emitir;
 using System;
 
 namespace Emitir.CertificadoDeFirma_Tests
 {
     [TestClass()]
-    public class FechaDeEmision_Tests : Solicitudes
+    public class FechaDeEmision_Tests : EscenariosDeSolicitudes
     {
         private DateTime elResultadoEsperado;
         private DateTime elResultadoObtenido;
@@ -13,7 +14,7 @@ namespace Emitir.CertificadoDeFirma_Tests
         [TestMethod()]
         public void FechaDeEmision_CasoUnico()
         {
-            elResultadoEsperado = new DateTime(2016, 11, 3);
+            elResultadoEsperado = LaFechaActual();
 
             InicialiceUnNacional();
             elResultadoObtenido = new CertificadoDeFirma(laSolicitud).FechaDeEmision;

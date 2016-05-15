@@ -35,8 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ComparacionesParaPruebasUnitarias">
-      <HintPath>..\..\referencias\ComparacionesParaPruebasUnitarias.dll</HintPath>
+    <Reference Include="Mapeable.ComparacionesParaPruebasUnitarias">
+      <HintPath>..\..\referencias\Mapeable.ComparacionesParaPruebasUnitarias.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>

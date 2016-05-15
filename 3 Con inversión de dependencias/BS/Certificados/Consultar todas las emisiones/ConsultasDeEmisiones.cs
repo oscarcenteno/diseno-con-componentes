@@ -16,7 +16,7 @@ namespace BS.Certificados.ConsultarTodasLasEmisiones
 
         private static List<EmisionRealizada> Mapee(List<RegistroDeEmision> losRegistros)
         {
-            return MapeoDeRegistrosDeEmision.Mapee(losRegistros);
+            return MapeoAEmisionesRealizadas.Mapee(losRegistros);
         }
     }
 }

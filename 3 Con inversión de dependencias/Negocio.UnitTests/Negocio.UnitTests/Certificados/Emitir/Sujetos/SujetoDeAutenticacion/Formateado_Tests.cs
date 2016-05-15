@@ -4,7 +4,7 @@ using Negocio.Certificados.Emitir.Sujetos;
 namespace Sujetos_Tests.SujetoDeAutenticacion_Tests
 {
     [TestClass()]
-    public class Formateado_Tests: EscenarioBase_Tests
+    public class Formateado_Tests: DatosParaPruebasDeSujetos
     {
         [TestMethod()]
         public void Formateado_DeAutenticacionParaUnNacional()

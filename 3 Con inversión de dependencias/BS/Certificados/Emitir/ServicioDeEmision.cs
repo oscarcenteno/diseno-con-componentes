@@ -33,7 +33,7 @@ namespace BS.Certificados.Emitir
 
         private static RegistroDeEmision MapeeAUnRegistroDeEmision(Emision laEmision)
         {
-            return MapeoARegistroDeEmision.Mapee(laEmision);
+            return MapeoDeEmisionARegistroDeEmision.Mapee(laEmision);
         }
 
         private static Emision GenereLaEmision(SolicitudCompleta laSolicitud)

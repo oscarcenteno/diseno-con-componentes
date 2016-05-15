@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Mapeable.ComparacionesParaPruebasUnitarias">
+      <HintPath>..\referencias\Mapeable.ComparacionesParaPruebasUnitarias.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -50,13 +53,31 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Certificados\Consultar los certificados\Response Models\MapeoDeRegistrosDeCertificado\Mapee_Tests.cs" />
-    <Compile Include="Certificados\Consultar todas las emisiones\Response Models\MapeoDeRegistrosDeEmision\Mapee_Tests.cs" />
-    <Compile Include="Certificados\Emitir\Mapeo hacia DS\MapeoAlRegistroDeEmision\Mapee_Tests.cs" />
-    <Compile Include="Certificados\Emitir\Mapeo hacia DS\MapeoARegistrosDeCertificados\ComoListaMapeada_Tests.cs" />
+    <Compile Include="Certificados\Consultar los certificados\Response Models\MapeoACertificadosEmitidos\Mapee_Tests.cs" />
+    <Compile Include="Certificados\Consultar todas las emisiones\Response Models\MapeoAEmisionesRealizadas\Mapee_Tests.cs" />
+    <Compile Include="Certificados\Emitir\Mapeo hacia DS\MapeoDeEmisionARegistroDeEmision\Mapee_Tests.cs" />
+    <Compile Include="Certificados\Emitir\Mapeo hacia DS\MapeoDeEmisionARegistrosDeCertificados\ComoListaMapeada_Tests.cs" />
+    <Compile Include="Certificados\Emitir\EscenariosDeMapeos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BS\BS.csproj">
+      <Project>{88d8c147-3fba-4d15-a498-b33193e55694}</Project>
+      <Name>BS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DS\DS.csproj">
+      <Project>{f35d0865-e782-4f4a-aa82-ac4fa713952c}</Project>
+      <Name>DS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio.UnitTests\Negocio.UnitTests\Negocio.UnitTests.csproj">
+      <Project>{eb73a5f7-6fe7-4a83-b23b-7b4db8174498}</Project>
+      <Name>Negocio.UnitTests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{a2bfbcea-aaf7-4d09-9f75-c4eb6fa7d355}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

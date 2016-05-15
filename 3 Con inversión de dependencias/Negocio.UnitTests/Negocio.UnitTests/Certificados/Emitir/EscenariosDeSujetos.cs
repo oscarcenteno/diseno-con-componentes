@@ -1,4 +1,4 @@
-﻿class EscenariosDeSujetos
+﻿public static class EscenariosDeSujetos
 {
     public static string UnSujetoDeAutenticacionParaUnNacional()
     {

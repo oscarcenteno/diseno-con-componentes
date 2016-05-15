@@ -1,10 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Negocio.Certificados.Emitir;
+using Negocio.UnitTests.Certificados.Emitir;
 
 namespace Emitir.CertificadoDeFirma_Tests
 {
     [TestClass()]
-    public class Sujeto_Tests : Solicitudes
+    public class Sujeto_Tests : EscenariosDeSolicitudes
     {
         private string elResultadoEsperado;
         private string elResultadoObtenido;

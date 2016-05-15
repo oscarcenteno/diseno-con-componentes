@@ -4,7 +4,7 @@ using Negocio.Certificados.Emitir.Sujetos;
 namespace Sujetos_Tests.Surname_Tests 
 {
     [TestClass()]
-    public class ComoTexto_Tests : EscenarioBase_Tests
+    public class ComoTexto_Tests : DatosParaPruebasDeSujetos
     {
         [TestMethod()]
         public void ComoTexto_CasoUnico() 

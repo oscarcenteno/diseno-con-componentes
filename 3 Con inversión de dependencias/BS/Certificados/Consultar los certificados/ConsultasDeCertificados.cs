@@ -16,7 +16,7 @@ namespace BS.Certificados.ConsultarLosCertificados
 
         private static List<CertificadoEmitido> Mapee(List<RegistroDeCertificado> losRegistros)
         {
-            return MapeoDeRegistrosDeCertificado.Mapee(losRegistros);
+            return MapeoACertificadosEmitidos.Mapee(losRegistros);
         }
     }
 }

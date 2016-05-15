@@ -5,11 +5,11 @@ using Mapeable;
 
 namespace BS.Certificados.Emitir.MapeoHaciaDS
 {
-    public class MapeoARegistrosDeCertificados
+    public class MapeoDeEmisionARegistrosDeCertificados
     {
         private List<Certificado> losCertificados;
 
-        public MapeoARegistrosDeCertificados(Emision laEmision)
+        public MapeoDeEmisionARegistrosDeCertificados(Emision laEmision)
         {
             losCertificados = laEmision.Certificados;
         }

@@ -53,13 +53,13 @@
   <ItemGroup>
     <Compile Include="Certificados\Consultar los certificados\ConsultasDeCertificados.cs" />
     <Compile Include="Certificados\Consultar los certificados\Response Models\CertificadoEmitido.cs" />
-    <Compile Include="Certificados\Consultar los certificados\Response Models\MapeoDeRegistrosDeCertificado.cs" />
+    <Compile Include="Certificados\Consultar los certificados\Response Models\MapeoACertificadosEmitidos.cs" />
     <Compile Include="Certificados\Consultar todas las emisiones\Response Models\EmisionRealizada.cs" />
     <Compile Include="Certificados\Consultar todas las emisiones\ConsultasDeEmisiones.cs" />
-    <Compile Include="Certificados\Consultar todas las emisiones\Response Models\MapeoDeRegistrosDeEmision.cs" />
+    <Compile Include="Certificados\Consultar todas las emisiones\Response Models\MapeoAEmisionesRealizadas.cs" />
     <Compile Include="Certificados\Emitir\Request Models\DatosDeLaSolicitud.cs" />
-    <Compile Include="Certificados\Emitir\Mapeo hacia DS\MapeoARegistrosDeCertificados.cs" />
-    <Compile Include="Certificados\Emitir\Mapeo hacia DS\MapeoAlRegistroDeEmision.cs" />
+    <Compile Include="Certificados\Emitir\Mapeo hacia DS\MapeoDeEmisionARegistrosDeCertificados.cs" />
+    <Compile Include="Certificados\Emitir\Mapeo hacia DS\MapeoDeEmisionARegistroDeEmision.cs" />
     <Compile Include="Certificados\Emitir\Request Models\DatosDelSolicitante.cs" />
     <Compile Include="Certificados\Emitir\ServicioDeEmision.cs" />
     <Compile Include="Certificados\Emitir\Request Models\SolicitudCompleta.cs" />

@@ -5,7 +5,7 @@ using System;
 
 namespace BS.Certificados.Emitir.MapeoHaciaDS
 {
-    public static class MapeoARegistroDeEmision
+    public static class MapeoDeEmisionARegistroDeEmision
     {
         public static RegistroDeEmision Mapee(Emision laEmision)
         {
@@ -22,7 +22,7 @@ namespace BS.Certificados.Emitir.MapeoHaciaDS
 
         private static List<RegistroDeCertificado> MapeeLosRegistrosDeCertificados(Emision laEmision)
         {
-            return new MapeoARegistrosDeCertificados(laEmision).ComoListaMapeada();
+            return new MapeoDeEmisionARegistrosDeCertificados(laEmision).ComoListaMapeada();
         }
     }
 }

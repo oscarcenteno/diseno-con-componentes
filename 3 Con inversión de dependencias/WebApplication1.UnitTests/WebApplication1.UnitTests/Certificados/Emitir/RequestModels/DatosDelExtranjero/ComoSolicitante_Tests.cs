@@ -3,23 +3,23 @@ using Negocio.Certificados.Emitir.Sujetos;
 using WebApplication1.Certificados.Emitir.RequestModels;
 using Mapeable.ComparacionesParaPruebasUnitarias;
 
-namespace WebApplication1.UnitTests.Certificados.Emitir.RequestModels.DatosDelNacional_Tests
+namespace WebApplication1.UnitTests.Certificados.Emitir.RequestModels.DatosDelExtranjero_Tests
 {
     [TestClass]
     public class ComoSolicitante_Tests
     {
         private Solicitante elResultadoEsperado;
         private Solicitante elResultadoObtenido;
-        private DatosDelNacional losDatos;
+        private DatosDelExtranjero losDatos;
 
         [TestInitialize]
         public void Inicialice()
         {
-            losDatos = new DatosDelNacional();
-            losDatos.Identificacion = "0503680922";
-            losDatos.Nombre = "Juan";
-            losDatos.PrimerApellido = "Sanchez";
-            losDatos.SegundoApellido = "Vargas";
+            losDatos = new DatosDelExtranjero();
+            losDatos.Identificacion = "1213412342";
+            losDatos.Nombre = "John";
+            losDatos.PrimerApellido = "Smith";
+            losDatos.SegundoApellido = "Jones";
         }
 
         [TestMethod]
@@ -34,11 +34,11 @@ namespace WebApplication1.UnitTests.Certificados.Emitir.RequestModels.DatosDelNa
 
         private Solicitante CreeUnSolicitanteExtranjero()
         {
-            SolicitanteNacional elSolicitante = new SolicitanteNacional();
-            elSolicitante.Identificacion= "0503680922";
-            elSolicitante.Nombre = "Juan";
-            elSolicitante.PrimerApellido= "Sanchez";
-            elSolicitante.SegundoApellido= "Vargas";
+            SolicitanteExtranjero elSolicitante = new SolicitanteExtranjero();
+            elSolicitante.Identificacion= "1213412342";
+            elSolicitante.Nombre = "John";
+            elSolicitante.PrimerApellido= "Smith";
+            elSolicitante.SegundoApellido= "Jones";
 
             return elSolicitante;
         }

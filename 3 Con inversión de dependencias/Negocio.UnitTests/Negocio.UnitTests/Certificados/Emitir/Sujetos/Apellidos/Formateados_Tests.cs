@@ -4,7 +4,7 @@ using Negocio.Certificados.Emitir.Sujetos;
 namespace Sujetos_Tests
 {
     [TestClass()]
-    public class Formateados_Tests : EscenarioBase_Tests
+    public class Formateados_Tests : DatosParaPruebasDeSujetos
     {
         [TestMethod()]
         public void Formateados_CasoUnico()

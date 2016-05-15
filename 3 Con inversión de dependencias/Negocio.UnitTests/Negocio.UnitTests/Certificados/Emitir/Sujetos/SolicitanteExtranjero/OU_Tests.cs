@@ -3,7 +3,7 @@
 namespace Sujetos_Tests.Solicitante_Tests
 {
     [TestClass()]
-    public class OU_Tests : EscenarioBase_Tests
+    public class OU_Tests : DatosParaPruebasDeSujetos
     {
         [TestMethod()]
         public void OU_CasoUnico() 

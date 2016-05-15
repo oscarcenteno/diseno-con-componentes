@@ -4,7 +4,7 @@ using Mapeable;
 
 namespace BS.Certificados.ConsultarLosCertificados
 {
-    public class MapeoDeRegistrosDeCertificado
+    public class MapeoACertificadosEmitidos
     {
         public static List<CertificadoEmitido> Mapee(List<RegistroDeCertificado> losRegistros)
         {

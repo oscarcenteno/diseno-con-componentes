@@ -4,7 +4,7 @@ using Negocio.Certificados.Emitir.Sujetos;
 namespace Sujetos_Tests
 {
     [TestClass()]
-    public abstract class EscenarioBase_Tests
+    public abstract class DatosParaPruebasDeSujetos
     {
         protected string elResultadoEsperado;
         protected string elResultadoObtenido;

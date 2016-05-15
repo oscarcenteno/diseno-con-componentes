@@ -4,7 +4,7 @@ using Negocio.Certificados.Emitir.Sujetos;
 namespace Sujetos_Tests
 {
     [TestClass()]
-    public class SinEspaciosAlFinal_Tests : EscenarioBase_Tests
+    public class SinEspaciosAlFinal_Tests : DatosParaPruebasDeSujetos
     {
         [TestMethod()]
         public void SinEspaciosAlFinal_CasoUnico()

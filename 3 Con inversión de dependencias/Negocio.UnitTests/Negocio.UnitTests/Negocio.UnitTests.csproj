@@ -35,6 +35,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Mapeable, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\referencias\Mapeable.dll</HintPath>
+    </Reference>
+    <Reference Include="Mapeable.ComparacionesParaPruebasUnitarias">
+      <HintPath>..\..\referencias\Mapeable.ComparacionesParaPruebasUnitarias.dll</HintPath>
+    </Reference>
     <Reference Include="NSubstitute, Version=1.10.0.0, Culture=neutral, PublicKeyToken=92dd2e9066daa5ca, processorArchitecture=MSIL">
       <HintPath>..\..\packages\NSubstitute.1.10.0.0\lib\net40\NSubstitute.dll</HintPath>
       <Private>True</Private>
@@ -69,16 +76,20 @@
     <Compile Include="Certificados\Emitir\CertificadoDeFirma\SolicitanteID_Tests.cs" />
     <Compile Include="Certificados\Emitir\CertificadoDeFirma\Sujeto_Tests.cs" />
     <Compile Include="Certificados\Emitir\CertificadoDeFirma\Url_Tests.cs" />
-    <Compile Include="Certificados\Emitir\Emision\UnitTest1.cs" />
-    <Compile Include="Certificados\Emitir\EscenarioBase_Tests.cs" />
+    <Compile Include="Certificados\Emitir\Emision\Identificacion_Tests.cs" />
+    <Compile Include="Certificados\Emitir\Emision\Certificados_Tests.cs" />
+    <Compile Include="Certificados\Emitir\EscenariosDeCertificados.cs" />
+    <Compile Include="Certificados\Emitir\EscenariosDeSolicitudes.cs" />
     <Compile Include="Certificados\Emitir\EscenariosDeSujetos.cs" />
-    <Compile Include="Certificados\Emitir\ListaDeCertificados\UnitTest1.cs" />
-    <Compile Include="Certificados\Emitir\SolicitudDeEmision\UnitTest1.cs" />
+    <Compile Include="Certificados\Emitir\ListaDeCertificados\ListaDeCertificados_Tests.cs" />
+    <Compile Include="Certificados\Emitir\SolicitudDeEmision\SujetoDeFirma_Tests.cs" />
+    <Compile Include="Certificados\Emitir\SolicitudDeEmision\SujetoDeAutenticacion_Tests.cs" />
+    <Compile Include="Certificados\Emitir\SolicitudDeEmision\Identificacion_Tests.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\ApellidosFormateados\SinEspaciosAlFinal_Tests.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\Apellidos\Formateados_Tests.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\CNDeAutenticacion\Formateados_Tests.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\CNDeFirma\Formateados_Tests.cs" />
-    <Compile Include="Certificados\Emitir\Sujetos\EscenarioBase_Tests.cs" />
+    <Compile Include="Certificados\Emitir\Sujetos\EscenariosDeSujetos.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\GivenName\Formateados_Tests.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\SolicitanteExtranjero\OU_Tests.cs" />
     <Compile Include="Certificados\Emitir\Sujetos\SolicitanteExtranjero\SerialNumber_Tests.cs" />

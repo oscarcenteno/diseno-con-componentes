@@ -11,7 +11,7 @@ namespace Negocio.Certificados.Emitir
             this.laSolicitud = laSolicitud;
         }
 
-        public List<Certificado> Certificados
+        public ListaDeCertificados Certificados
         {
             get
             {

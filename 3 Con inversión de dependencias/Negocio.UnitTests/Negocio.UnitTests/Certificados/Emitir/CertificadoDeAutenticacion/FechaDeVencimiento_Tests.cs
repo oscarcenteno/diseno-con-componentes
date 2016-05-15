@@ -1,11 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Negocio.Certificados.Emitir;
+using Negocio.UnitTests.Certificados.Emitir;
 using System;
 
 namespace Emitir.CertificadoDeAutenticacion_Tests
 {
     [TestClass()]
-    public class FechaDeVencimiento_Tests : Solicitudes
+    public class FechaDeVencimiento_Tests : EscenariosDeSolicitudes
     {
         private DateTime elResultadoEsperado;
         private DateTime elResultadoObtenido;
