@@ -10,12 +10,11 @@ Representa un aplicación web como las que uno lee en los tutoriales en internet
 Representa a una aplicación donde se buscó separar la interfaz gráfica, de la lógica de negocio, y del acceso a datos. Sin embargo, no se logró hacer ya que no se puede probar la lógica de negocio sin la base de datos, por lo que terminamos probando todo manualmente desde a interfaz gráfica. No hay pruebas unitarias y hay bifurcaciones en los algoritmos.
 
 ## 3 Con inversión de dependencias
-Representa a la verdadera división por componentes, cumpliendo los principios SOLID. 
-* Está escrito con orientación a objetos con responsabilidades únicas (Single Responsibility Principle). 
+Representa a la división por componentes, cumpliendo los principios SOLID. 
+* Se busca ilustrar cómo la orientación a objetos permite clases con responsabilidades únicas (Single Responsibility Principle). 
 * Las clases que participan en condicionales se pueden extender sin cambiar el código existente (Open Closed Principle). 
 * Se hace un uso correcto de la herencia (Liskov Substitution Principle). 
 * Ningún flujo de ejecución tiene bifurcaciones (Interface Segregation Principle). 
-* La verdadera componentización se da porque la lógica de negocio obtiene datos de la base de datos y del UI sin estar acoplado ("amarrado") a sus tecnologías. Es fácil de entender, de probar y de cambiar.
-
-# Más información
-Si desea más información para cursos o capacitaciones en diseño en software ágile, me puede contactar.
+* La lógica de negocio obtiene datos de la base de datos y del UI sin estar acoplado ("amarrado") a sus tecnologías.
+* Se tiene cobertura de pruebas unitarias 100% en Negocio. 
+* En BS y en si Website se tiene 100% de cobertura de pruebas unitarias en los ViewModels, RequestModels y ResponseModels.
