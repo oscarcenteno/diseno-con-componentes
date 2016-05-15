@@ -17,4 +17,7 @@ Representa a la división por componentes, cumpliendo los principios SOLID.
 * Ningún flujo de ejecución tiene bifurcaciones (Interface Segregation Principle). 
 * La lógica de negocio obtiene datos de la base de datos y del UI sin estar acoplado ("amarrado") a sus tecnologías.
 * Se tiene cobertura de pruebas unitarias 100% en Negocio. 
-* En BS y en si Website se tiene 100% de cobertura de pruebas unitarias en los ViewModels, RequestModels y ResponseModels.
+* En el BS y en el Website se tiene 100% de cobertura de pruebas unitarias en los ViewModels, RequestModels y ResponseModels.
+
+## Mapeos
+Los mapeos de los ViewModels, RequestModels, ResponseModels y los objetos de negocio se realizan con la librería Mapeable (es un repositorio de mi autoría). Este facilita mucho hacer los mapeos y sus pruebas unitarias. Hay mucho menos líneas de código y les pruebas unitarias son sencillas.
