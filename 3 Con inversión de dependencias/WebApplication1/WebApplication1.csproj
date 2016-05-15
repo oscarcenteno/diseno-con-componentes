@@ -170,8 +170,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Certificados\Consultar los certificados\View Models\MapeoDeCertificadosEmitidos.cs" />
-    <Compile Include="Certificados\Consultar todas las emisiones\View Models\MapeoDeEmisionesRealizadas.cs" />
+    <Compile Include="Certificados\Consultar los certificados\View Models\MapeoACertificadosEmitidosVista.cs" />
+    <Compile Include="Certificados\Consultar todas las emisiones\View Models\MapeoAEmisionesRealizadasVista.cs" />
     <Compile Include="Controllers\CertificadosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

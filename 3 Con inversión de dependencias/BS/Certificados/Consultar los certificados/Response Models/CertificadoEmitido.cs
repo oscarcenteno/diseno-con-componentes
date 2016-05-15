@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BS.Certificados.ConsultarLosCertificados
+namespace BS.Certificados.ConsultarLosCertificados.ResponseModels
 {
     public class CertificadoEmitido
     {

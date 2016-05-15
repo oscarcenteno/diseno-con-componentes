@@ -15,6 +15,6 @@ namespace WebApplication1.Certificados.ConsultarTodasLasEmisiones.ViewModels
         }
 
         [DisplayName("Identificación")]
-        public string Identificacion { get; private set; }
+        public string Identificacion { get; set; }
     }
 }

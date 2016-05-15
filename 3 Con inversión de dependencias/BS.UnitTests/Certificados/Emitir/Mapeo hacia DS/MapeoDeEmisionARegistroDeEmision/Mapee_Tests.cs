@@ -1,7 +1,7 @@
 ﻿using DS.Certificados;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Mapeable.ComparacionesParaPruebasUnitarias;
-using BS.Certificados.Emitir.MapeoHaciaDS;
+using BS.Certificados.Emitir.Mapeos;
 using Negocio.Certificados.Emitir;
 
 namespace BS.UnitTests.Certificados.Emitir.RequestModels.MapeoDeEmisionARegistroDeEmision_Tests

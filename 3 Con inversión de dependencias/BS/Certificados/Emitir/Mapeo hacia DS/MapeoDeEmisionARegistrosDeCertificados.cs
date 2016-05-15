@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Negocio.Certificados.Emitir;
 using Mapeable;
 
-namespace BS.Certificados.Emitir.MapeoHaciaDS
+namespace BS.Certificados.Emitir.Mapeos
 {
     public class MapeoDeEmisionARegistrosDeCertificados
     {

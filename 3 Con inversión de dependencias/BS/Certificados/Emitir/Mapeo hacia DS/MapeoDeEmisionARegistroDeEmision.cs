@@ -1,9 +1,8 @@
 ﻿using DS.Certificados;
 using Negocio.Certificados.Emitir;
 using System.Collections.Generic;
-using System;
 
-namespace BS.Certificados.Emitir.MapeoHaciaDS
+namespace BS.Certificados.Emitir.Mapeos
 {
     public static class MapeoDeEmisionARegistroDeEmision
     {

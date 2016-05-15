@@ -3,6 +3,7 @@ using BS.Certificados.ConsultarTodasLasEmisiones;
 using System.Collections.Generic;
 using DS.Certificados;
 using Mapeable.ComparacionesParaPruebasUnitarias;
+using BS.Certificados.ConsultarTodasLasEmisiones.ResponseModels;
 
 namespace BS.UnitTests.Certificados.ConsultarTodasLasEmisione.ResponseModels.MapeoAEmisionesRealizadas_Tests
 {

@@ -10,6 +10,8 @@ using BS.Certificados.ConsultarLosCertificados;
 
 using WebApplication1.Certificados.ConsultarTodasLasEmisiones.ViewModels;
 using BS.Certificados.ConsultarTodasLasEmisiones;
+using BS.Certificados.ConsultarTodasLasEmisiones.ResponseModels;
+using BS.Certificados.ConsultarLosCertificados.ResponseModels;
 
 namespace WebApplication1.Controllers
 {
@@ -31,7 +33,7 @@ namespace WebApplication1.Controllers
 
         private static List<EmisionRealizadaVista> MapeeALaVista(List<EmisionRealizada> lasEmisiones)
         {
-            return MapeoDeEmisionesRealizadas.Mapee(lasEmisiones);
+            return MapeoAEmisionesRealizadasVista.Mapee(lasEmisiones);
         }
 
         private static List<EmisionRealizada> ConsulteTodasLasEmisiones()
@@ -68,7 +70,7 @@ namespace WebApplication1.Controllers
 
         private static List<CertificadoEmitidoVista> MapeeALaVista(List<CertificadoEmitido> losCertificados)
         {
-            return MapeoDeCertificadosEmitidos.Mapee(losCertificados);
+            return MapeoACertificadosEmitidosVista.Mapee(losCertificados);
         }
 
         // GET: Certificados/EmitaANacional

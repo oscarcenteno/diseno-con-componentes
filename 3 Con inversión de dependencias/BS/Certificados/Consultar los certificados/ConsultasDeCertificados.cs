@@ -1,4 +1,5 @@
-﻿using DS.Certificados;
+﻿using BS.Certificados.ConsultarLosCertificados.ResponseModels;
+using DS.Certificados;
 using DS.Certificados.Consultas;
 using System.Collections.Generic;
 

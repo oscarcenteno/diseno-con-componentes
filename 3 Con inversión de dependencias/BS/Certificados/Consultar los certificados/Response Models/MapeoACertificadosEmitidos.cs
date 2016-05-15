@@ -2,7 +2,7 @@
 using DS.Certificados;
 using Mapeable;
 
-namespace BS.Certificados.ConsultarLosCertificados
+namespace BS.Certificados.ConsultarLosCertificados.ResponseModels
 {
     public class MapeoACertificadosEmitidos
     {

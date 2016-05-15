@@ -1,5 +1,5 @@
 ﻿using Negocio.Certificados.Emitir;
-using BS.Certificados.Emitir.MapeoHaciaDS;
+using BS.Certificados.Emitir.Mapeos;
 using BS.Certificados.Emitir.RequestModels;
 using DS.Certificados;
 using DS.Certificados.Emitir;
@@ -10,20 +10,10 @@ namespace BS.Certificados.Emitir
     {
         public static void Ejecute(DatosDelSolicitante losDatos)
         {
-            RegistroDeEmision elRegistro = ObtengaElRegistroDeEmision(losDatos);
-            AgregueABaseDeDatos(elRegistro);
-        }
-
-        private static RegistroDeEmision ObtengaElRegistroDeEmision(DatosDelSolicitante losDatos)
-        {
-            Emision laEmision = ObtengaLaEmision(losDatos);
-            return MapeeAUnRegistroDeEmision(laEmision);
-        }
-
-        private static Emision ObtengaLaEmision(DatosDelSolicitante losDatos)
-        {
             SolicitudCompleta laSolicitud = CompleteLaSolicitud(losDatos);
-            return GenereLaEmision(laSolicitud);
+            Emision laEmision = GenereLaEmision(laSolicitud);
+            RegistroDeEmision elRegistro = MapeeAUnRegistroDeEmision(laEmision);
+            AgregueABaseDeDatos(elRegistro);
         }
 
         private static void AgregueABaseDeDatos(RegistroDeEmision elRegistro)

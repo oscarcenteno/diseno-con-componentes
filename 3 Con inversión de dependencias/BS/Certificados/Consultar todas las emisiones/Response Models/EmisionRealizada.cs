@@ -1,4 +1,4 @@
-﻿namespace BS.Certificados.ConsultarTodasLasEmisiones
+﻿namespace BS.Certificados.ConsultarTodasLasEmisiones.ResponseModels
 {
     public class EmisionRealizada
     {

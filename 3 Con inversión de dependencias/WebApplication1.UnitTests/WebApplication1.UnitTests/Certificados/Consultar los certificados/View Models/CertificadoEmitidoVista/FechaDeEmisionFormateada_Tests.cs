@@ -1,28 +1,29 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WebApplication1.Certificados.ConsultarTodasLasEmisiones.ViewModels;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using WebApplication1.Certificados.ConsultarLosCertificados.ViewModels;
 
-namespace WebApplication1.UnitTests.Certificados.Consultar_los_certificados.View_Models.EmisionRealizadaVista_Tests
+namespace WebApplication1.UnitTests.Certificados.Consultar_los_certificados.View_Models.CertificadoEmitidoVista_Tests
 {
     [TestClass]
-    public class IDComoTexto_Tests
+    public class FechaDeEmisionFormateada_Tests
     {
         private string elResultadoEsperado;
         private string elResultadoObtenido;
-        private EmisionRealizadaVista laVista;
+        private CertificadoEmitidoVista laVista;
 
         [TestInitialize]
         public void Inicialice()
         {
-            laVista = new EmisionRealizadaVista();
-            laVista.ID = 987;
+            laVista = new CertificadoEmitidoVista();
+            laVista.FechaDeEmision = new DateTime(2016, 12, 9);
         }
 
         [TestMethod]
-        public void IDComoTexto_CasoUnico_ComoString()
+        public void FechaDeEmisionFormateada_CasoUnico_ComoString()
         {
-            elResultadoEsperado = "987";
+            elResultadoEsperado = "2016-12-09";
 
-            elResultadoObtenido = laVista.IDComoTexto;
+            elResultadoObtenido = laVista.FechaDeEmisionFormateada;
 
             Assert.AreEqual(elResultadoEsperado, elResultadoObtenido);
         }

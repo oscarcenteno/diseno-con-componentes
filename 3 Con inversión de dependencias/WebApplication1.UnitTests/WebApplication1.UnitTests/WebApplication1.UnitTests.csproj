@@ -57,7 +57,9 @@
   <ItemGroup>
     <Compile Include="Certificados\Consultar los certificados\View Models\CertificadoEmitidoVista\FechaDeVencimientoFormateada_Tests.cs" />
     <Compile Include="Certificados\Consultar los certificados\View Models\CertificadoEmitidoVista\FechaDeEmisionFormateada_Tests.cs" />
-    <Compile Include="Certificados\Consultar todas las emisiones\View Models\EmisionRealizadaVista\FechaDeEmisionFormateada_Tests.cs" />
+    <Compile Include="Certificados\Consultar los certificados\View Models\MapeoACertificadosEmitidosVista.cs\Mapee_Tests.cs" />
+    <Compile Include="Certificados\Consultar todas las emisiones\View Models\EmisionRealizadaVista\IDComoTexto_Tests.cs" />
+    <Compile Include="Certificados\Consultar todas las emisiones\View Models\MapeoAEmisionesRealizadasVista\Mapee_Tests.cs" />
     <Compile Include="Certificados\Emitir\RequestModels\DatosDelNacional\ComoSolicitante_Tests.cs" />
     <Compile Include="Certificados\Emitir\RequestModels\DatosDelExtranjero\ComoSolicitante_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

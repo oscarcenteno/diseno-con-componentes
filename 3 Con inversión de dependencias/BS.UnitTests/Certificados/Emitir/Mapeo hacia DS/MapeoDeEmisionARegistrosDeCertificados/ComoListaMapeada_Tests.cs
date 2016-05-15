@@ -1,4 +1,4 @@
-﻿using BS.Certificados.Emitir.MapeoHaciaDS;
+﻿using BS.Certificados.Emitir.Mapeos;
 using DS.Certificados;
 using Mapeable.ComparacionesParaPruebasUnitarias;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

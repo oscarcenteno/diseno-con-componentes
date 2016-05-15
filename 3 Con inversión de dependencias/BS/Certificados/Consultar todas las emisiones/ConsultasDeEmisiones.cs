@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using DS.Certificados.Consultas;
 using DS.Certificados;
+using BS.Certificados.ConsultarTodasLasEmisiones.ResponseModels;
 
 namespace BS.Certificados.ConsultarTodasLasEmisiones
 {

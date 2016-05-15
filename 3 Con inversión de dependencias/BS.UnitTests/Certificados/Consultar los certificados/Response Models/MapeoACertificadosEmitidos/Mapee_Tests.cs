@@ -3,6 +3,7 @@ using BS.Certificados.ConsultarLosCertificados;
 using System.Collections.Generic;
 using DS.Certificados;
 using Mapeable.ComparacionesParaPruebasUnitarias;
+using BS.Certificados.ConsultarLosCertificados.ResponseModels;
 
 namespace BS.UnitTests.Certificados.ConsultarLosCertificados.ResponseModels.MapeoACertificadosEmitidos_Tests
 {

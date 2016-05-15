@@ -2,7 +2,7 @@
 using DS.Certificados;
 using Mapeable;
 
-namespace BS.Certificados.ConsultarTodasLasEmisiones
+namespace BS.Certificados.ConsultarTodasLasEmisiones.ResponseModels
 {
     public class MapeoAEmisionesRealizadas
     {

@@ -1,10 +1,10 @@
-﻿using BS.Certificados.ConsultarLosCertificados;
+﻿using BS.Certificados.ConsultarLosCertificados.ResponseModels;
 using Mapeable;
 using System.Collections.Generic;
 
 namespace WebApplication1.Certificados.ConsultarLosCertificados.ViewModels
 {
-    public static class MapeoDeCertificadosEmitidos
+    public static class MapeoACertificadosEmitidosVista
     {
         public static List<CertificadoEmitidoVista> Mapee(List<CertificadoEmitido> losCertificados)
         {
