@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{81E520BB-C980-48F6-B5C7-A6DCAC0503BA}"
 EndProject
@@ -27,6 +27,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1.UnitTests", "WebApplication1.UnitTests\WebApplication1.UnitTests\WebApplication1.UnitTests.csproj", "{AC1CA62B-40A6-467D-A8F4-FB83D190FDA7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BS.UnitTests", "BS.UnitTests\BS.UnitTests.csproj", "{AA1DA601-859B-42B0-A547-8CF456066CDC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{EE822FF6-2F26-4101-BE0F-E43CC3B1EDFD}"
+	ProjectSection(SolutionItems) = preProject
+		UnitTestsReport.bat = UnitTestsReport.bat
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
