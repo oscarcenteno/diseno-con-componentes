@@ -1,7 +1,7 @@
 # Diseño con componentes
 Ejemplos para explicar cómo diseñar componentes de software.
 
-Se muestra una aplicación que cumple los principios de orientación a objetos y está organizada por componentes hasta lograr la Inversión de Dependencias.
+[![Build status](https://ci.appveyor.com/api/projects/status/x5v48xc923g5b9lr?svg=true)](https://ci.appveyor.com/project/oscarcenteno/diseno-con-componentes)
 
 ## 1 Sin componentes: 
 Representa un aplicación web como las que uno lee en los tutoriales en internet. Todo está programado dentro del mismo proyecto. No hay pruebas unitarias y hay bifurcaciones en los algoritmos.
