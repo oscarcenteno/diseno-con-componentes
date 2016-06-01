@@ -18,7 +18,7 @@ namespace BS.Certificados.Emitir
 
         private static void AgregueABaseDeDatos(RegistroDeEmision elRegistro)
         {
-            Repositorio.Agregue(elRegistro);
+            RepositorioDeEmisiones.Agregue(elRegistro);
         }
 
         private static RegistroDeEmision MapeeAUnRegistroDeEmision(Emision laEmision)

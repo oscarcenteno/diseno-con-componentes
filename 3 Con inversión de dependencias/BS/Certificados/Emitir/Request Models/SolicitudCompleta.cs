@@ -13,7 +13,7 @@ namespace BS.Certificados.Emitir
         {
             get
             {
-                return Repositorio.ObtengaElCrl();
+                return ConsultasDeParametros.ObtengaElCrl();
             }
         }
 

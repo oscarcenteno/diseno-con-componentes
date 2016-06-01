@@ -53,7 +53,8 @@
     <Compile Include="Certificados\Consultas\RepositorioDeEmisiones.cs" />
     <Compile Include="Certificados\EmisionDBContext.cs" />
     <Compile Include="Certificados\EmisionDBInitializer.cs" />
-    <Compile Include="Certificados\Emitir\Repositorio.cs" />
+    <Compile Include="Certificados\Emitir\RepositorioDeParametros.cs" />
+    <Compile Include="Certificados\Emitir\RepositorioDeEmisiones.cs" />
     <Compile Include="Certificados\RegistroDeParametro.cs" />
     <Compile Include="Certificados\RegistroDeCertificado.cs" />
     <Compile Include="Certificados\RegistroDeEmision.cs" />
