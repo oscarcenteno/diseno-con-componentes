@@ -10,11 +10,10 @@ namespace WebApplication1.Controllers
 {
     public class CertificadosController : Controller
     {
-        private EmisionDBContext db = new EmisionDBContext();
-
         // GET: Certificados
         public ActionResult Index()
         {
+            EmisionDBContext db = new EmisionDBContext();
             return View(db.Emisiones.ToList());
         }
 
@@ -25,6 +24,7 @@ namespace WebApplication1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            EmisionDBContext db = new EmisionDBContext();
             List<RegistroDeCertificado> certificados = db.Certificados.Where(c => c.SolicitanteID == id).ToList();
             if (certificados.Count == 0)
             {
@@ -48,46 +48,7 @@ namespace WebApplication1.Controllers
         {
             if (ModelState.IsValid)
             {
-                DateTime laFechaActual = DateTime.Now;
-                DateTime laFechaDeVencimiento = laFechaActual.AddYears(4);
-
-                const string crl = "crl";
-                string elCrl = db.Parametros.Where(c => c.Nombre == crl).First().Valor;
-
-                List<RegistroDeCertificado> losCertificados = new List<RegistroDeCertificado>();
-
-                RegistroDeCertificado elDeFirma = new RegistroDeCertificado();
-                elDeFirma.SolicitanteID = losDatos.Identificacion;
-                elDeFirma.Sujeto = GenereElSujeto(losDatos.Identificacion,
-                    losDatos.Nombre,
-                    losDatos.PrimerApellido,
-                    losDatos.SegundoApellido,
-                    losDatos.TipoDeIdentificacion,
-                    TipoDeCertificado.DeFirma);
-                elDeFirma.FechaDeEmision = laFechaActual;
-                elDeFirma.FechaDeVencimiento = laFechaDeVencimiento;
-                elDeFirma.Crl = elCrl;
-                losCertificados.Add(elDeFirma);
-
-                RegistroDeCertificado elDeAutenticacion = new RegistroDeCertificado();
-                elDeAutenticacion.SolicitanteID = losDatos.Identificacion;
-                elDeAutenticacion.Sujeto = GenereElSujeto(losDatos.Identificacion,
-                    losDatos.Nombre,
-                    losDatos.PrimerApellido,
-                    losDatos.SegundoApellido,
-                    losDatos.TipoDeIdentificacion,
-                    TipoDeCertificado.DeAutenticacion);
-                elDeAutenticacion.FechaDeEmision = laFechaActual;
-                elDeAutenticacion.FechaDeVencimiento = laFechaDeVencimiento;
-                elDeAutenticacion.Crl = elCrl;
-                losCertificados.Add(elDeAutenticacion);
-
-                RegistroDeEmision elRegistroDeEmision = new RegistroDeEmision();
-                elRegistroDeEmision.Identificacion = losDatos.Identificacion;
-                elRegistroDeEmision.RegistrosDeCertificados = losCertificados;
-
-                db.Emisiones.Add(elRegistroDeEmision);
-                db.SaveChanges();
+                AgregueLaEmision(losDatos);
 
                 return RedirectToAction("Index");
             }
@@ -95,12 +56,42 @@ namespace WebApplication1.Controllers
             return View(losDatos);
         }
 
-        private string GenereElSujeto(string laIdentificacion,
-            string elNombre,
-            string elPrimerApellido,
-            string elSegundoApellido,
-            TipoDeIdentificacion elTipoDeIdentificacion,
-            TipoDeCertificado elTipo)
+        private void AgregueLaEmision(DatosDelSolicitante losDatos)
+        {
+            DateTime laFechaActual = DateTime.Now;
+            DateTime laFechaDeVencimiento = laFechaActual.AddYears(4);
+
+            EmisionDBContext db = new EmisionDBContext();
+            const string crl = "crl";
+            string elCrl = db.Parametros.Where(c => c.Nombre == crl).First().Valor;
+
+            List<RegistroDeCertificado> losCertificados = new List<RegistroDeCertificado>();
+
+            RegistroDeCertificado elDeFirma = new RegistroDeCertificado();
+            elDeFirma.SolicitanteID = losDatos.Identificacion;
+            elDeFirma.Sujeto = GenereElSujeto(losDatos.Identificacion, losDatos.Nombre, losDatos.PrimerApellido, losDatos.SegundoApellido, losDatos.TipoDeIdentificacion, TipoDeCertificado.DeFirma);
+            elDeFirma.FechaDeEmision = DateTime.Now;
+            elDeFirma.FechaDeVencimiento = laFechaDeVencimiento;
+            elDeFirma.Crl = elCrl;
+            losCertificados.Add(elDeFirma);
+
+            RegistroDeCertificado elDeAutenticacion = new RegistroDeCertificado();
+            elDeAutenticacion.SolicitanteID = losDatos.Identificacion;
+            elDeAutenticacion.Sujeto = GenereElSujeto(losDatos.Identificacion, losDatos.Nombre, losDatos.PrimerApellido, losDatos.SegundoApellido, losDatos.TipoDeIdentificacion, TipoDeCertificado.DeAutenticacion);
+            elDeAutenticacion.FechaDeEmision = DateTime.Now;
+            elDeAutenticacion.FechaDeVencimiento = laFechaDeVencimiento;
+            elDeAutenticacion.Crl = elCrl;
+            losCertificados.Add(elDeAutenticacion);
+
+            RegistroDeEmision elRegistroDeEmision = new RegistroDeEmision();
+            elRegistroDeEmision.Identificacion = losDatos.Identificacion;
+            elRegistroDeEmision.RegistrosDeCertificados = losCertificados;
+
+            db.Emisiones.Add(elRegistroDeEmision);
+            db.SaveChanges();
+        }
+
+        private string GenereElSujeto(string laIdentificacion, string elNombre, string elPrimerApellido, string elSegundoApellido, TipoDeIdentificacion elTipoDeIdentificacion, TipoDeCertificado elTipo)
         {
             string elNombreEnMayuscula;
             elNombreEnMayuscula = elNombre.ToUpper();
@@ -160,6 +151,7 @@ namespace WebApplication1.Controllers
         {
             if (disposing)
             {
+                EmisionDBContext db = new EmisionDBContext();
                 db.Dispose();
             }
             base.Dispose(disposing);
