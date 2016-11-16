@@ -1,12 +1,11 @@
-﻿using BS.Certificados.Emitir.RequestModels;
+﻿using Certificados.DS.GenerarEmision.ConInversionDeDependencias;
 using Mapeable;
-using Negocio.Certificados.Emitir.Sujetos;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace WebApplication1.Certificados.Emitir.RequestModels
 {
-    public class DatosDelExtranjero: DatosDelSolicitante
+    public class DatosDelExtranjero
     {
         [Required(ErrorMessage = "La identificación es requerida.")]
         [DisplayName("Identificación")]
@@ -22,9 +21,9 @@ namespace WebApplication1.Certificados.Emitir.RequestModels
         [DisplayName("Segundo apellido")]
         public string SegundoApellido { get; set; }
 
-        public override Solicitante ComoSolicitante()
+        public DatosDeLaEmisionExtranjeraConDependencias ComoObjeto()
         {
-            return new Mapeo<DatosDelExtranjero, SolicitanteExtranjero>().Mapee(this);
+            return new Mapeo<DatosDelExtranjero, DatosDeLaEmisionExtranjeraConDependencias>().Mapee(this);
         }
     }
 }

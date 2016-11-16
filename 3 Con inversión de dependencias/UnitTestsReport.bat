@@ -27,7 +27,7 @@ exit /b %errorlevel%
 "packages\OpenCover.4.6.519\tools\OpenCover.Console.exe" ^
 -register:user ^
 -target:"%VS140COMNTOOLS%\..\IDE\mstest.exe" ^
--targetargs:"/testcontainer:Negocio.UnitTests\Negocio.UnitTests\bin\Debug\Negocio.UnitTests.dll /testcontainer:BS.UnitTests\bin\Debug\BS.UnitTests.dll /testcontainer:WebApplication1.UnitTests\WebApplication1.UnitTests\bin\Debug\WebApplication1.UnitTests.dll /resultsfile:CodeCoverage.trx" ^
+-targetargs:"/testcontainer:Certificados.Negocio.UnitTests\Certificados.Negocio.UnitTests\bin\Debug\Certificados.Negocio.UnitTests.dll /testcontainer:Certificados.DS.UnitTests\bin\Debug\Certificados.DS.UnitTests.dll /testcontainer:WebApplication1.UnitTests\WebApplication1.UnitTests\bin\Debug\WebApplication1.UnitTests.dll /resultsfile:CodeCoverage.trx" ^
 -filter:"+[*]*" ^
 -mergebyhash ^
 -skipautoprops ^
@@ -35,7 +35,7 @@ exit /b %errorlevel%
 exit /b %errorlevel%
  
 :RunReportGeneratorOutput
-"packages\ReportGenerator.2.4.5.0\tools\ReportGenerator.exe" ^
+"packages\ReportGenerator.2.5.1\tools\ReportGenerator.exe" ^
 -reports:"CodeCoverageReports\CodeCoverage.xml" ^
 -targetdir:"CodeCoverageReports\ReportGenerator Output"
 exit /b %errorlevel%

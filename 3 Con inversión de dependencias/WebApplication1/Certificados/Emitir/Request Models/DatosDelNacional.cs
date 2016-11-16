@@ -1,12 +1,11 @@
-﻿using BS.Certificados.Emitir.RequestModels;
+﻿using Certificados.DS.GenerarEmision.ConInversionDeDependencias;
 using Mapeable;
-using Negocio.Certificados.Emitir.Sujetos;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace WebApplication1.Certificados.Emitir.RequestModels
 {
-    public class DatosDelNacional:DatosDelSolicitante
+    public class DatosDelNacional
     {
         [Required(ErrorMessage = "La cédula es requerida.")]
         [DisplayName("Cédula")]
@@ -22,9 +21,9 @@ namespace WebApplication1.Certificados.Emitir.RequestModels
         [Required(ErrorMessage = "El segundo apellido es requerido.")]
         public string SegundoApellido { get; set; }
 
-        public override Solicitante ComoSolicitante()
+        public DatosDeLaEmisionNacionalConDependencias ComoObjeto()
         {
-            return new Mapeo<DatosDelNacional, SolicitanteNacional>().Mapee(this);
+            return new Mapeo<DatosDelNacional, DatosDeLaEmisionNacionalConDependencias>().Mapee(this);
         }
     }
 }

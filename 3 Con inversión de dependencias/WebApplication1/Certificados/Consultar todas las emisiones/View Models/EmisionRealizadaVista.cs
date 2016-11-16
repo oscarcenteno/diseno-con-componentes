@@ -1,20 +1,21 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 
 namespace WebApplication1.Certificados.ConsultarTodasLasEmisiones.ViewModels
 {
     public class EmisionRealizadaVista
     {
-        public int ID { get;  set; }
+        public int Id { get;  set; }
 
         public string IDComoTexto
         {
             get
             {
-                return ID.ToString();
+                return Id.ToString();
             }
         }
 
-        [DisplayName("Identificación")]
-        public string Identificacion { get; set; }
+        [DisplayName("Fecha de generacion")]
+        public DateTime FechaDeGeneracion { get; set; }
     }
 }

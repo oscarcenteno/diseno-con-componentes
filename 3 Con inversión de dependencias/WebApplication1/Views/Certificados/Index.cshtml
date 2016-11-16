@@ -17,7 +17,7 @@
            # Id
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Identificacion)
+            @Html.DisplayNameFor(model => model.FechaDeGeneracion)
         </th>
         <th></th>
     </tr>
@@ -28,10 +28,10 @@
             @Html.DisplayFor(modelItem => item.IDComoTexto)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Identificacion)
+            @Html.DisplayFor(modelItem => item.FechaDeGeneracion)
         </td>
         <td>
-            @Html.ActionLink("Certificados emitidos", "Details", new { id=item.Identificacion })
+            @Html.ActionLink("Certificados emitidos", "Details", new { id=item.ID })
         </td>
     </tr>
 }

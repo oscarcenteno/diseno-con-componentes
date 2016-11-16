@@ -1,17 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Net;
 using System.Web.Mvc;
-
 using WebApplication1.Certificados.Emitir.RequestModels;
-using BS.Certificados.Emitir;
-
 using WebApplication1.Certificados.ConsultarLosCertificados.ViewModels;
-using BS.Certificados.ConsultarLosCertificados;
-
 using WebApplication1.Certificados.ConsultarTodasLasEmisiones.ViewModels;
-using BS.Certificados.ConsultarTodasLasEmisiones;
-using BS.Certificados.ConsultarTodasLasEmisiones.ResponseModels;
-using BS.Certificados.ConsultarLosCertificados.ResponseModels;
+using Certificados.BS.RegistrarEmision.ConObjetos;
+using Certificados.DS.MapeosABaseDeDatos;
+using Certificados.DS.GenerarEmision.ConInversionDeDependencias;
 
 namespace WebApplication1.Controllers
 {
@@ -20,57 +15,28 @@ namespace WebApplication1.Controllers
         // GET: Certificados
         public ActionResult Index()
         {
-            List<EmisionRealizadaVista> lasEmisiones = ObtengaLasEmisionesParaMostrar();
-            return View(lasEmisiones);
-        }
+            List<RegistroDeEmision> losRegistros = RepositorioDeEmisiones.ConsulteTodas();
 
-        private static List<EmisionRealizadaVista> ObtengaLasEmisionesParaMostrar()
-        {
-            List<EmisionRealizada> lasEmisiones = ConsulteTodasLasEmisiones();
+            List<EmisionRealizadaVista> lasVistas;
+            lasVistas = MapeoAEmisionesRealizadasVista.Mapee(losRegistros);
 
-            return MapeeALaVista(lasEmisiones);
-        }
-
-        private static List<EmisionRealizadaVista> MapeeALaVista(List<EmisionRealizada> lasEmisiones)
-        {
-            return MapeoAEmisionesRealizadasVista.Mapee(lasEmisiones);
-        }
-
-        private static List<EmisionRealizada> ConsulteTodasLasEmisiones()
-        {
-            return ConsultasDeEmisiones.ConsulteTodas();
+            return View(lasVistas);
         }
 
         // GET: Certificados/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(int id)
         {
-            if (id == null)
+            if (id == 0)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            List<CertificadoEmitidoVista> losCertificados;
-            losCertificados = ObtengaLosCertificados(id);
+            RegistroDeEmision elRegistro = RepositorioDeEmisiones.ObtengaPorId(id);
 
-            return View(losCertificados);
-        }
+            List<CertificadoVista> lasVistas;
+            lasVistas = new MapeoACertificadosVista(elRegistro).ComoLista();
 
-        private static List<CertificadoEmitidoVista> ObtengaLosCertificados(string id)
-        {
-            List<CertificadoEmitido> losCertificados;
-            losCertificados = ConsulteLosCertificados(id);
-
-            return MapeeALaVista(losCertificados);
-        }
-
-        private static List<CertificadoEmitido> ConsulteLosCertificados(string id)
-        {
-            return ConsultasDeCertificados.ConsultePorId(id);
-        }
-
-        private static List<CertificadoEmitidoVista> MapeeALaVista(List<CertificadoEmitido> losCertificados)
-        {
-            return MapeoACertificadosEmitidosVista.Mapee(losCertificados);
+            return View(lasVistas);
         }
 
         // GET: Certificados/EmitaANacional
@@ -86,7 +52,9 @@ namespace WebApplication1.Controllers
         {
             if (ModelState.IsValid)
             {
-                ServicioDeEmision.Ejecute(losDatos);
+                DatosDeLaEmisionNacionalConDependencias laSolicitud;
+                laSolicitud = losDatos.ComoObjeto();
+                ProcesoDeEmision.Procese(laSolicitud);
 
                 return RedirectToAction("Index");
             }
@@ -100,14 +68,17 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        // POST: Certificados/EmitaAExatranjero
+        // POST: Certificados/EmitaAExtranjero
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult EmitaAExtranjero(DatosDelExtranjero losDatos)
         {
             if (ModelState.IsValid)
             {
-                ServicioDeEmision.Ejecute(losDatos);
+                DatosDeLaEmisionExtranjeraConDependencias laSolicitud;
+                laSolicitud = losDatos.ComoObjeto();
+                ProcesoDeEmision.Procese(laSolicitud);
+
                 return RedirectToAction("Index");
             }
 

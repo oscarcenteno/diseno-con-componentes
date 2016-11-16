@@ -45,8 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Mapeable">
-      <HintPath>..\referencias\Mapeable.dll</HintPath>
+    <Reference Include="Mapeable, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapeable.1.0.0.1\lib\net40\Mapeable.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -170,7 +171,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Certificados\Consultar los certificados\View Models\MapeoACertificadosEmitidosVista.cs" />
+    <Compile Include="Certificados\Consultar los certificados\View Models\MapeoACertificadosVista.cs" />
     <Compile Include="Certificados\Consultar todas las emisiones\View Models\MapeoAEmisionesRealizadasVista.cs" />
     <Compile Include="Controllers\CertificadosController.cs" />
     <Compile Include="Global.asax.cs">
@@ -180,7 +181,7 @@
     <Compile Include="Certificados\Emitir\Request Models\DatosDelExtranjero.cs" />
     <Compile Include="Certificados\Emitir\Request Models\DatosDelNacional.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Certificados\Consultar los certificados\View Models\CertificadoEmitidoVista.cs" />
+    <Compile Include="Certificados\Consultar los certificados\View Models\CertificadoVista.cs" />
     <Compile Include="Certificados\Consultar todas las emisiones\View Models\EmisionRealizadaVista.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -235,17 +236,13 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BS\BS.csproj">
-      <Project>{88d8c147-3fba-4d15-a498-b33193e55694}</Project>
-      <Name>BS</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DS\DS.csproj">
+    <ProjectReference Include="..\Certificados.DS\Certificados.DS.csproj">
       <Project>{f35d0865-e782-4f4a-aa82-ac4fa713952c}</Project>
-      <Name>DS</Name>
+      <Name>Certificados.DS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Negocio\Negocio.csproj">
-      <Project>{a2bfbcea-aaf7-4d09-9f75-c4eb6fa7d355}</Project>
-      <Name>Negocio</Name>
+    <ProjectReference Include="..\Certificados.Negocio\Certificados.Negocio.csproj">
+      <Project>{d529b3f9-4b6d-41f0-bc8f-bee9ee7c497f}</Project>
+      <Name>Certificados.Negocio</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
